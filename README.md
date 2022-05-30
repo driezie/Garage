@@ -1,4 +1,4 @@
-#Project W6 - Garage
+# Project W6 - Garage
 
 
 Een garagebedrijf voert onderhoudsbeurten uit aan auto’s. De laatste jaren is de garage flink gegroeid, en het aantal medewerkers natuurlijk ook. Er werken 2 parttime receptionisten, 1 boekhouder, 6 verkopers, en zojuist is de 4e monteur aangenomen. Met zoveel verschillende medewerkers is het niet alleen lastig om te zorgen dat ze hun tijd efficiënt besteden, maar ook dat er geen miscommunicatie optreed. 
@@ -7,20 +7,20 @@ De applicatie kent een webomgeving voor de klanten en een kantooromgeving (C#) v
 Beide applicaties maken gebruik van de zelfde MySQL database. 
 Doe zelf onderzoek naar het “garageproces” en realiseer dit in een applicatie (overleg dit goed met de docent). 
 
-#EISEN
+# EISEN
 •    Gebruik 1 database.
 •    De dashboard applicatie voor de klant, receptie, werkplaats en magazijn.
 
 Gegevens welke door het garagebedrijf worden geregistreerd staan op de factuur hieronder.
 
-##Doelen
+## Doelen
 
 Je analyseert gegevens en werkt dit uit naar een front-end voor klanten en bruikbare informatie voor de garagehouder.
 Je programmeert een applicatie voor verschillende rollen.
 Je werkt samen met een andere discipline aan een gemeenschappelijk product.
 Zorg voor een ruim gevulde database met artikelen, prijzen en reparaties.
 
-##Beoordeling
+## Beoordeling
 
 Bij de beoordeling zal worden gelet op wat we in de lessen behandeld hebben.
 
@@ -32,7 +32,7 @@ Bij de beoordeling zal worden gelet op wat we in de lessen behandeld hebben.
 •    De site is niet kwetsbaar voor SQL injectie of XSS
 ​
 
-##Benodigde kennis
+## Benodigde kennis
 
 In dit project maak je gebruik van de volgende vakken en technieken:
 •    Analyse van gegevens
@@ -44,7 +44,7 @@ In dit project maak je gebruik van de volgende vakken en technieken:
 •    Laravel
  
 
-##Functionaliteit
+## Functionaliteit
 
 Website voor klanten: 
 •    Registreren / inloggen
