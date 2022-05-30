@@ -5,7 +5,7 @@
             require_once '../config.php'; 
             require_once './assets/html/head.php'; 
         ?>
-        <title>Home</title>
+        <title>Inloggen</title>
         <link rel="stylesheet" href="./css/style.css">
     </head>
     <body>
