@@ -14,17 +14,18 @@
                 <a href="index.php">
                     <img class="logo__image" src="./img/logo.png" alt="logo van de website">
                 </a>
-            </div>
-            <div class="main-header__nav-menu">
+                <div class="main-header__nav-menu">
                 <ul>
-                    <li><a href="#">Hoe werkt het?</a></li>
-                    <li><a href="#">Prijzen</a></li>
-                    <li><a href="#">Onze Garage</a></li>
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="./login.php">Login</a></li>
-                    <li><a href="./register.php" class="button__special">Registreer</a></li>
+                    <li><a class="nav-link" href="#">Hoe werkt het?</a></li>
+                    <li><a class="nav-link" href="#">Prijzen</a></li>
+                    <li><a class="nav-link" href="#">Onze Garage</a></li>
+                    <li><a class="nav-link" href="#">Contact</a></li>
+                    <li><a class="nav-link" href="./login.php">Login</a></li>
+                    <li><a class="nav-link special" href="./register.php">Registreer</a></li>
                 </ul>
             </div>
+            </div>
+            
         </div>
 
         <div class="container">
@@ -138,4 +139,22 @@
             <a class="btn btn-primary" href="index.php" role="button">Klik voor meer reviews</a>
         </div>
     </body>
+    <script>
+        /* -- Sticky Navbar -- */
+        const header = document.getElementsByClassName('main-header__nav')[0];
+        
+        function stickyNavbar() {
+            header.classList.toggle('scrolled', window.scrollY > 0);
+            // console.log(window.scrollY);
+        }
+
+        stickyNavbar();
+        window.addEventListener('scroll', stickyNavbar);
+
+        /* -- END OF Sticky Navbar -- */
+
+    </script>
 </html>
+
+
+
