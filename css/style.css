@@ -11,8 +11,132 @@
     --bg-color-1: #f2f2f2;
     --navbar-color: #000000;
     --navbar-color-hover: #f2f2f2;
+    --text-color: #061a22;
 }
 
-.main-header__nav {
+body {
+    margin: 0;
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+}
+
+.text {
+    color: var(--text-color);
+}
+
+.topnav {
+    z-index: 999;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
+    background-color: rgb(255, 255, 255);
+    /* backdrop-filter: blur(15px); */
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: var(--text-color);
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    color: #e53d51;
+}
+
+.topnav .title {
+    float: left;
+    display: block;
+    /* color: white; */
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+    font-size: 23px;
+}
+
+.sticky {
+    position: fixed;
     top: 0;
+    width: 100%;
+}
+
+
+/* .topnav .title {
+    /* font-family: 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+
+
+/* font-size: 25px; */
+
+
+/* color: rgba(6, 147, 227, 1); 
+} */
+
+.topnav a.special {
+    padding: 10px 18px;
+    margin: 8px 0px 0px 10px;
+    border: 2px solid rgba(6, 26, 34, .1);
+    border-radius: 100px;
+    /* background-color: #04AA6D; */
+}
+
+.centered {
+    z-index: 9999;
+    /* center text on image */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* font-size: 20rem; */
+}
+
+.image_container {
+    position: relative;
+    text-align: center;
+    color: white;
+    z-index: -1;
+    /* cut background from top */
+    /* clip-path: polygon(0 0, 100% 0, 100% 75%, 0 calc(100% - 10vw)); */
+}
+
+.container {
+    z-index: 99;
+    padding: 10px 10px;
+}
+
+.container_button {
+    color: white;
+    font-size: 17px !important;
+}
+
+.container h2 {
+    font-size: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.container .btn {
+    padding: 10px 12px 10px 20px;
+    border: 0px;
+}
+
+.container_frame {
+    background-color: red;
+    padding-top: 0.46875rem;
+    padding-right: 0.23438rem;
+    padding-left: 0.23438rem;
+}
+
+.container div.container_button {
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.btn {
+    margin-top: 4px !important;
+    margin-bottom: 20px !important;
 }
