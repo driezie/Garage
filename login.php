@@ -16,14 +16,14 @@
     <body>
     <div class="sticky" id="myTopnav">
         <div class="left topnav" >
-            <h3 class="title"><b>van Franken Auto Service</b></h3>
+            <h3 class="title"><b>van Franken Car Service</b></h3>
             <a href="./">Home</a>
-            <a href="#">Hoe werkt het?</a>
-            <a href="#">Prijzen</a>
-            <a href="#">Onze Garage</a>
+            <a href="#">How does it work</a>
+            <a href="#">Prices</a>
+            <a href="#">Our Garage</a>
             <a href="#">Contact</a>
-            <a href="#">Aanmelden</a>
-            <a href="#" class="special">Plan uw afspraak</a>
+            <a href="#">Sign Up</a>
+            <a href="#" class="special">Schedule your appointment</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
@@ -37,16 +37,13 @@
                 <div class="col-12 col-lg-9">
                     <?php
                         require_once './assets/html/alert.php';
-
-
-
+                        alert();
                     ?>
-
                     <h2 class="h3 header">
-                    Aanmelden
+                    Sign up
                     </h2>
                     <p class="container__text">
-                    Log hier in met uw aangemaakte account. Heeft u nog gee account? Dan moet u een afspraak maken. <a href="./werkplaatsplanner/1.voertuig/">klik hier om een afspraak te maken</a>
+                    Log in here with your created account. Don't have an account yet? Then you must make an appointment. <a href="./werkplaatsplanner/1.voertuig/">Click here to make an appointment</a>
                     </p>
                     <form class = "login" action="./assets/actions/action.php?action=login" id='login' method="post">
                         <div class="form-row" style="max-width: 300px; margin-bottom: 10px;" >
@@ -56,10 +53,10 @@
 
                         <div class="form-row" style="max-width: 300px; margin-bottom: 10px;">
                                 <label for="inputEmail4">Wachtwoord</label>
-                                <input type="password" class="form-control" name='password' id="password" placeholder="password">
+                                <input type="password" class="form-control" name='password' id="password" placeholder="Password">
                         </div>
                         <div class="form-row">
-                            <button type="submit" class="btn btn-primary">Aanmelden</button>
+                            <button type="submit" class="btn btn-primary">Sign Up</button>
                         </div>
                     </form>
                 </div>

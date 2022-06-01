@@ -25,7 +25,7 @@ body {
 }
 
 .topnav {
-    z-index: 999;
+    z-index: 0;
     padding-top: 10px;
     padding-bottom: 10px;
     overflow: hidden;
@@ -120,7 +120,7 @@ body {
 }
 
 .container .btn {
-    padding: 10px 12px 10px 20px;
+    padding: 10px 20px 10px 20px;
     border: 0px;
 }
 
@@ -139,4 +139,72 @@ body {
 .btn {
     margin-top: 4px !important;
     margin-bottom: 20px !important;
+}
+
+
+/* stappen shit */
+
+.planner-progress {
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.planner-progress ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background-color: #333333; */
+    text-align: left;
+    max-height: 100px;
+}
+
+.planner-progress ul li {
+    /* float: left; */
+    border-right: 1px solid #e6e6e6;
+    display: inline-block;
+    height: 100%;
+    min-width: 260px;
+}
+
+.step-active {
+    background-color: #e53d51 !important;
+}
+
+.step-active a {
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.step-disabled {
+    background-color: #333333;
+    !important;
+}
+
+.step-disabled a {
+    color: white !important;
+    opacity: 1 !important;
+}
+
+.planner-progress ul li a {
+    opacity: .6;
+    display: block;
+    color: #263238;
+    ;
+    text-align: left;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.planner-progress ul li p {
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.planner-progress ul li h3 {
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.2;
 }

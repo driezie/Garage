@@ -16,7 +16,6 @@ function alert($type, $title,  $message, $location) {
 }
 
 function use_query($query) {
-   // use pdo
     global $dbh;
     $stmt = $dbh->prepare($query);
     $stmt->execute();
@@ -39,28 +38,20 @@ function try_login() {
                     // $_SESSION['session_id'] = $user['klnr'];
                     // $_SESSION['session_email'] = $user['email'];
                     // $_SESSION['session_role'] = $user['role'];
-                    alert('green', '⚠️ Goed!','Gegevens kloppen.', '../../dashboard/');
+                    alert('green', '🥳 Logged in!','You logged in successfully!', '../../dashboard/');
         } else {
-            echo 'fout';
-            alert('red', '⚠️ Fout!','Gegevens kloppen niet.', '../../login.php');
+            alert('red', '⚠️ Error!','Data is incorrect', '../../login.php');
         }
     } else {
-        echo 'fout';
-        alert('red', '⚠️ Fout!','Gegevens kloppen niet.', '../../login.php');
+        alert('red', '⚠️ Error!','Data is incorrect', '../../login.php');
     }
         
     
 }
 
-
-
-echo '$POST';
-echo '<pre>'; print_r($_POST); echo '</pre>';
-echo '<br>';
-echo '$GET';
-echo '<pre>'; print_r($_GET); echo '</pre>';
-echo '<br>';
-echo '$SESSION';
-echo '<pre>'; print_r($_SESSION); echo '</pre>';
+function try_logout(){
+    session_destroy();
+    alert('green', '🥳 Logged out!','You logged out successfully!', '../../login.php');
+}
 
 ?>
