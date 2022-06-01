@@ -97,7 +97,7 @@
                 Reviews
             </h2>
             <p class="container__text">
-                Hier hebben wij voor u een aantal reviews over onze diensten.
+                Hier hebben wij voor u een aantal reviews over onze diensten. 
             </p>
             <div class="review container__list">
                 <div class="review-container">
