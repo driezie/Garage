@@ -20,7 +20,7 @@
                     <li><a class="nav-link" href="#">Prijzen</a></li>
                     <li><a class="nav-link" href="#">Onze Garage</a></li>
                     <li><a class="nav-link" href="#">Contact</a></li>
-                    <li><a class="nav-link special" href="./werkplaatsplanner/voertuig/">Plan uw afspraak</a></li>
+                    <li><a class="nav-link special" href="./werkplaatsplanner/1.voertuig/">Plan uw afspraak</a></li>
                 </ul>
             </div>
             </div>
@@ -35,7 +35,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, ipsum nunc euismod nisi, eu tincidunt nisl nunc euismod nisi.
                 </p>
                 <div class="container__lower">
-                <a href="./werkplaatsplanner/voertuig/" class="container__button">Plan onderhoudsbeurt</a>
+                <a href="./werkplaatsplanner/1.voertuig/" class="container__button">Plan onderhoudsbeurt</a>
                     <a href="index.php" class="container__button">Bekijk reviews</a>
                 </div>
                 
@@ -72,7 +72,7 @@
             <p class="container__text">
                 Uw auto heeft onderhoud nodig? Dan is een kleine onderhoudsbeurt het juiste moment om te doen. Dit is als u minder dan 15.000 kilometer heeft gereden of uw auto is minder dan 2 jaar. Als u langer dan 15.000 kilometer heeft gereden, dan past een grotere onderhoudsbeurt meer bij u.
             </p>
-            <a class="btn btn-primary" href="./werkplaatsplanner/voertuig/" role="button">Plan een kleine beurt</a>
+            <a class="btn btn-primary" href="./werkplaatsplanner/1.voertuig/?onderhoud=kleinebeurt" role="button">Plan een kleine beurt</a>
         </div>
 
 
@@ -89,7 +89,7 @@
             <p class="container__text">
                 Is ur auto ouder dan 2 jaar of heeft meer dan 15.000 kilometer gereden? Dan is een grote onderhoudsbeurt het juiste moment om te doen. Wij als van Franken vinden het belangrijk dat elke auto elke 5 jaar een servicebeurt nodig heeft.
             </p>
-            <a class="btn btn-primary" href="./werkplaatsplanner/voertuig/" role="button">Plan een grote beurt</a>
+            <a class="btn btn-primary" href="./werkplaatsplanner/1.voertuig/?onderhoud=grotebeurt" role="button">Plan een grote beurt</a>
         </div>
 
         <div class="container">

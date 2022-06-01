@@ -66,7 +66,7 @@
                 <option selected>Volvo 6</option>
             </select>
             <br><br>
-            <a class="btn btn-primary" href="../onderhoud/" role="button">Volgende stap</a>
+            <a class="btn btn-primary" href="../2.onderhoud/" role="button">Volgende stap</a>
         </div>
 
         

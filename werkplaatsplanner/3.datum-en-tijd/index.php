@@ -63,10 +63,8 @@
             </select>
 
             <br><br>
-            <a class="btn btn-primary" href="../gegevens/" role="button">Volgende stap</a>
+            <a class="btn btn-primary" href="../4.gegevens/" role="button">Volgende stap</a>
         </div>
-
-        
     </body>
     <script>
         /* -- Sticky Navbar -- */
