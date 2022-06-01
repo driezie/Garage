@@ -1,1 +1,0 @@
-<!-- Hier komen verschillende dashboards voor alle gebruikers. Dit zijn receptionisten, klanten en alle andere werknemers (ook voor de owner) -->
