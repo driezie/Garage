@@ -85,7 +85,7 @@
             </div>
 
             <br><br>
-            <a class="btn btn-primary" href="../datum-en-tijd/" role="button">Volgende stap</a>
+            <a class="btn btn-primary" href="../3.datum-en-tijd/" role="button">Volgende stap</a>
         </div>
 
         
