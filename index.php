@@ -19,10 +19,10 @@
             <h3 class="title"><b>van Franken Car Service</b></h3>
             <a href="#">Home</a>
             <a href="#">How does it work?</a>
-            <a href="#">Prices</a>
+            <a href="./prices.php">Prices</a>
             <a href="#">Our Garage</a>
             <a href="#">Contact</a>
-            <a href="./login.php">Sign Up</a>
+            <a href="./login.php">Sign In</a>
             <a href="./werkplaatsplanner/" class="special">Schedule your appointment</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
@@ -38,9 +38,7 @@
             <span class="container_text" style='font-size: 17px; padding-left: 10px; padding-right: 10px;'><b> | </b></span>
                 <a href="index.php" class="container_button" style='font-size: 17px;'><b>View reviews</b></a>
             </div>
-
             </div>
-            
         </div>
 
 

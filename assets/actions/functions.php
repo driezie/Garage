@@ -35,10 +35,10 @@ function try_login() {
 
         if ($user) {
             if (password_verify($password, $user['password'])) {
-                    // $_SESSION['session_id'] = $user['klnr'];
-                    // $_SESSION['session_email'] = $user['email'];
-                    // $_SESSION['session_role'] = $user['role'];
-                    alert('green', '🥳 Logged in!','You logged in successfully!', '../../dashboard/');
+                    $_SESSION['session_id'] = $user['klnr'];
+                    $_SESSION['session_email'] = $user['email'];
+                    $_SESSION['session_role'] = $user['role'];
+                    alert('green', '🥳 Logged in!','You logged in successfully!', '../../customer/');
         } else {
             alert('red', '⚠️ Error!','Data is incorrect', '../../login.php');
         }

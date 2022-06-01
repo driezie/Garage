@@ -11,6 +11,8 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'logout') {
         try_logout();
     }
+
+    
 }
 
 

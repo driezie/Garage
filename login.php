@@ -22,7 +22,7 @@
             <a href="#">Prices</a>
             <a href="#">Our Garage</a>
             <a href="#">Contact</a>
-            <a href="#">Sign Up</a>
+            <a href="#">Sign In</a>
             <a href="#" class="special">Schedule your appointment</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
@@ -40,10 +40,10 @@
                         alert();
                     ?>
                     <h2 class="h3 header">
-                    Sign up
+                    Sign in
                     </h2>
                     <p class="container__text">
-                    Log in here with your created account. Don't have an account yet? Then you must make an appointment. <a href="./werkplaatsplanner/1.voertuig/">Click here to make an appointment</a>
+                    Sign in here with your created account. Don't have an account yet? Then you must make an appointment. <a href="./werkplaatsplanner/1.voertuig/">Click here to make an appointment</a>
                     </p>
                     <form class = "login" action="./assets/actions/action.php?action=login" id='login' method="post">
                         <div class="form-row" style="max-width: 300px; margin-bottom: 10px;" >
@@ -56,7 +56,7 @@
                                 <input type="password" class="form-control" name='password' id="password" placeholder="Password">
                         </div>
                         <div class="form-row">
-                            <button type="submit" class="btn btn-primary">Sign Up</button>
+                            <button type="submit" class="btn btn-primary">Sign In</button>
                         </div>
                     </form>
                 </div>
