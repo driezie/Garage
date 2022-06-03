@@ -4,24 +4,22 @@
         <?php 
             require_once '../config.php'; 
             require_once './assets/html/head.php'; 
-            
         ?>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <title>Home</title>
+        <title>Prices</title>
         <link rel="stylesheet" href="./css/style.css">
-        
+        <link rel="stylesheet" href="./css/footer.css">
     </head>
     <body>
     <div class="sticky" id="myTopnav">
         <div class="left topnav" >
             <h3 class="title"><b>van Franken Car Service</b></h3>
             <a href="./">Home</a>
-            <a href="#">How does it work?</a>
+            <a href="./howdoesitwork.php">How does it work?</a>
             <a href="#">Prices</a>
-            <a href="#">Our Garage</a>
-            <a href="#">Contact</a>
+            <a href="./contact.php">Contact</a>
             <a href="./login.php">Sign In</a>
             <a href="./werkplaatsplanner/" class="special">Schedule your appointment</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -29,17 +27,18 @@
             </a>
         </div>
     </div>
-    <div class="image_container">
-            <img class="container_image" src="./assets/img/garage_3.png" alt="banner" loading="lazy" style="width:100%; background-attachment: fixed; background-position: center;" >
-            <div class="centered"> 
-            <h1 class="" style='padding: 20px 0 20px 0; font-size: 60px; line-height: 60px;'>van Franken. Forward together.</h1>
-            <div class="container__lower" style= 'text-align: center; position: relative; z-index: 100;'>
-            <a href="./werkplaatsplanner/1.voertuig/" class="container_button" style='font-size: 17px;'><b>Schedule maintenance</b></a>
-            <span class="container_text" style='font-size: 17px; padding-left: 10px; padding-right: 10px;'><b> | </b></span>
-                <a href="index.php" class="container_button" style='font-size: 17px;'><b>View reviews</b></a>
-            </div>
+    <div class="container" style="margin-top: 100px">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li><a href="./">Home</a></li>
+                        <li class="active">Prices</li>
+                    </ol>
+                </div>
             </div>
         </div>
+    </div>
 
         <div class="container">
             <h2 class="h3 header">
@@ -48,52 +47,145 @@
             <p class="container__text">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisl nunc euismod nisi, eu porttitor nisl nunc euismod nisi.
             </p>
-            <div class="row gutters-4 gutters-lg-3 align-items-center" >
             
-                <div class="col-12 col-lg-4">
-                    <h3 class="review__name">
-                        Item 1
+        </div>
+
+        <div class="container-fluid">
+            <div class="container p-5">
+                <div class="row">
+                    <!-- Begin Card -->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card card1 h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">APK</h3>
+                                <p class='text-normal'>Some small information about it</p>
+                                <br>
+                                <span class="h2">€310</span>
+                                <br><br>
+                                <div class="d-grid my-3 button-price">
+                                    <a href='./' class="btn btn-outline-dark btn-block">Select</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                    <!-- Begin Card -->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card card1 h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">APK</h3>
+                                <p class='text-normal'>Some small information about it</p>
+                                <br>
+                                <span class="h2">€310</span>
+                                <br><br>
+                                <div class="d-grid my-3 button-price">
+                                    <a href='./' class="btn btn-outline-dark btn-block">Select</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                    <!-- Begin Card -->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card card1 h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">APK</h3>
+                                <p class='text-normal'>Some small information about it</p>
+                                <br>
+                                <span class="h2">€310</span>
+                                <br><br>
+                                <div class="d-grid my-3 button-price">
+                                    <a href='./' class="btn btn-outline-dark btn-block">Select</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                    <!-- Begin Card -->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card card1 h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">APK</h3>
+                                <p class='text-normal'>Some small information about it</p>
+                                <br>
+                                <span class="h2">€310</span>
+                                <br><br>
+                                <div class="d-grid my-3 button-price">
+                                    <a href='./' class="btn btn-outline-dark btn-block">Select</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                    <!-- Begin Card -->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card card1 h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">APK</h3>
+                                <p class='text-normal'>Some small information about it</p>
+                                <br>
+                                <span class="h2">€310</span>
+                                <br><br>
+                                <div class="d-grid my-3 button-price">
+                                    <a href='./' class="btn btn-outline-dark btn-block">Select</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                </div>    
+            </div>
+        </div>
+
+    <footer>
+            <div class="container">
+            <div class="row align-items-center" >
+                
+
+                <div class="col-10 col-lg-5">
+                    <h3 class="h3">
+                        About us
                     </h3>
-                    <p class="review__text">
-                        Small description about the price and the item
+                    <p class="container__text">
+                        We are a small company that offers a service for your car. We are located in the Netherlands and we are open 24/7. For any questions about the car or our service you can use our contact page to get in touch with us.
+                    </p>
+
+                    <a class="btn btn-primary" href="./contact.php" role="button">Contact us</a>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h3 class="h3">
+                        Navigation
+                    </h3>
+                    <p class="container__text">
+                        <a href="./" >Home</a>
+                    </p>
+                    <p class="container__text">
+                        <a href="./howdoesitwork.php">How does it work?</a>
+                    </p>
+                    <p class="container__text">
+                        <a href="./prices.php">Prices</a>
+                    </p>
+                    <p class="container__text">
+                        <a href="./contact.php">Contact</a>
+                    </p>
+                    <p class="container__text">
+                        <a href="./login.php">Sign In</a>
                     </p>
                 </div>
-                <div class="col-12 col-lg-4">
-                    <h3 class="review__name">
-                        Item 2
-                    </h3>
-                    <p class="review__text">
-                        Small description about the price and the item
-                    </p>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <h3 class="review__name">
-                        Item 3
-                    </h3>
-                    <p class="review__text">
-                        Small description about the price and the item
-                    </p>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <h3 class="review__name">
-                        Item 4
-                    </h3>
-                    <p class="review__text">
-                        Small description about the price and the item
-                    </p>
-                </div>
-                <div class="col-12 col-lg-4">
-                    <h3 class="review__name">
-                        Item 5
-                    </h3>
-                    <p class="review__text">
-                        Small description about the price and the item
-                    </p>
-                </div>
+
                 
             </div>
             </div>
-        </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted" style="margin: 0 auto;">
+                            van Franken Car Service, Copyright &copy; 2020
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
 

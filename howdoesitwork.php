@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <?php 
             require_once '../config.php'; 
@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <title>Sign in</title>
+        <title>Prices</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/footer.css">
     </head>
@@ -17,15 +17,15 @@
         <div class="left topnav" >
             <h3 class="title"><b>van Franken Car Service</b></h3>
             <a href="./">Home</a>
-            <a href="./howdoesitwork.php">How does it work</a>
+            <a href="#">How does it work?</a>
             <a href="./prices.php">Prices</a>
             <a href="./contact.php">Contact</a>
-            <a href="#">Sign In</a>
-            <a href="#" class="special">Schedule your appointment</a>
+            <a href="./login.php">Sign In</a>
+            <a href="./werkplaatsplanner/" class="special">Schedule your appointment</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars"></i>
             </a>
-        </div> 
+        </div>
     </div>
     <div class="container" style="margin-top: 100px">
         <div class="container">
@@ -33,47 +33,69 @@
                 <div class="col-md-12">
                     <ol class="breadcrumb">
                         <li><a href="./">Home</a></li>
-                        <li class="active">Sign in</li>
+                        <li class="active">How does it work?</li>
                     </ol>
                 </div>
             </div>
         </div>
     </div>
 
-
         <div class="container">
-            <div class="row gutters-4 gutters-lg-6 align-items-center" >
-                <div class="col-12 col-lg-9">
-                    <?php
-                        require_once './assets/html/alert.php';
-                        alert();
-                    ?>
-                    <h2 class="h3 header">
-                    Sign in
-                    </h2>
-                    <p class="container__text">
-                    Sign in here with your created account. Don't have an account yet? Then you must make an appointment. <a href="./werkplaatsplanner/1.voertuig/">Click here to make an appointment</a>
-                    </p>
-                    <form class = "login" action="./assets/actions/action.php?action=login" id='login' method="post">
-                        <div class="form-row" style="max-width: 300px; margin-bottom: 10px;" >
-                                <label for="email">Email</label>
-                                <input type="email" class="form-control" id="email" name='email' placeholder="Email">
-                        </div>
-
-                        <div class="form-row" style="max-width: 300px; margin-bottom: 10px;">
-                                <label for="inputEmail4">Wachtwoord</label>
-                                <input type="password" class="form-control" name='password' id="password" placeholder="Password">
-                        </div>
-                        <div class="form-row">
-                            <button type="submit" class="btn btn-primary">Sign In</button>
-                        </div>
-                    </form>
+            <h2 class="h3 header">
+                How does it work?
+            </h2>
+            <p class="container__text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisl nunc euismod nisi, eu porttitor nisl nunc euismod nisi.
+            </p>
+                <div class="row gutters-4 gutters-lg-3 align-items-center" >
+                    <div class="col-12 col-lg-4">
+                        <h3 class="review__name">
+                            Item 1
+                        </h3>
+                        <p class="review__text">
+                            Small description about the price and the item
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <h3 class="review__name">
+                            Item 2
+                        </h3>
+                        <p class="review__text">
+                            Small description about the price and the item
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <h3 class="review__name">
+                            Item 3
+                        </h3>
+                        <p class="review__text">
+                            Small description about the price and the item
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <h3 class="review__name">
+                            Item 4
+                        </h3>
+                        <p class="review__text">
+                            Small description about the price and the item
+                        </p>
+                    </div>
+                    <div class="col-12 col-lg-4">
+                        <h3 class="review__name">
+                            Item 5
+                        </h3>
+                        <p class="review__text">
+                            Small description about the price and the item
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
 
-        <footer style="position: fixed;">
+
+
+        <footer>
             <div class="container">
             <div class="row align-items-center" >
                 
@@ -122,7 +144,6 @@
                 </div>
             </div>
         </footer>
-
     </body>
 </html>
 

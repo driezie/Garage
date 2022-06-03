@@ -5,6 +5,7 @@ require_once '../database/dbh.php';
 
 session_start();
 $dbh = getDB();
+exit();
 
 function alert($type, $title,  $message, $location) {
     // check if location is not empty
@@ -40,18 +41,15 @@ function try_login() {
                     $_SESSION['session_role'] = $user['role'];
                     alert('green', '🥳 Logged in!','You logged in successfully!', '../../customer/');
         } else {
-            alert('red', '⚠️ Error!','Data is incorrect', '../../login.php');
+            alert('red', '⚠️ Error!','Data is incorrect!', '../../login.php');
         }
     } else {
-        alert('red', '⚠️ Error!','Data is incorrect', '../../login.php');
+        alert('red', '⚠️ Error!','Data is incorrect!', '../../login.php');
     }
-        
-    
 }
 
 function try_logout(){
     session_destroy();
     alert('green', '🥳 Logged out!','You logged out successfully!', '../../login.php');
 }
-
 ?>

@@ -29,6 +29,20 @@
     </div>
 
     <div class="container" style="margin-top: 100px">
+    <!-- breadcrumbs -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <ol class="breadcrumb">
+                        <li><a href="../" class="active">Dashboard</a></li>
+                        <li class="active">My Appointments</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
         <div class="row gutters-4 gutters-lg-6 align-items-center" >
             <div class="col-12 col-lg-9">
 
