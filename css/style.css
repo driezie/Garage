@@ -24,39 +24,7 @@ body {
     color: var(--text-color);
 }
 
-.topnav {
-    z-index: 0;
-    /* padding-top: 10px; */
-    /* padding-bottom: 10px; */
-    /* overflow: hidden; */
-    box-shadow: 0 5px 20px 0.1px rgba(0, 0, 0, 0.1);
-    background-color: rgb(255, 255, 255);
-    /* backdrop-filter: blur(15px); */
-}
 
-.topnav a {
-    /* float: left; */
-    /* display: block; */
-    color: var(--text-color);
-    /* text-align: center; */
-    /* padding: 20px 16px; */
-    text-decoration: none;
-    font-size: 17px;
-}
-
-.topnav a:hover {
-    color: #e53d51;
-}
-
-.topnav .title {
-    /* float: left; */
-    /* display: block; */
-    /* color: white; */
-    text-align: center;
-    /* padding: 0px 16px 0px 16px; */
-    text-decoration: none;
-    font-size: 23px;
-}
 
 .sticky {
     position: fixed;
@@ -66,16 +34,15 @@ body {
 }
 
 .topnav a.special {
-    /* padding: 10px 18px;
-    margin: 8px 0px 0px 10px; */
-    /* border: 2px solid rgba(6, 26, 34, .1); */
+    padding: 10px 18px; 
+    margin: 8px 0px 0px 10px; 
+    border: 2px solid rgba(6, 26, 34, .1);
     border-radius: 100px;
     height: 100%;
-    /* background-color: #04AA6D; */
+    background-color: #04AA6D;
 }
 
 .centered {
-    z-index: 9999;
     /* center text on image */
     position: absolute;
     top: 50%;
@@ -101,6 +68,16 @@ body {
 .container_button {
     color: white;
     font-size: 17px !important;
+    text-decoration: none !important;
+
+}
+
+.container_button b:hover {
+    text-decoration: none !important;
+    color: rgb(194, 194, 194);
+
+
+
 }
 
 .container h2 {

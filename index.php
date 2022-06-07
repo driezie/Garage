@@ -12,55 +12,23 @@
     <title>Home</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/footer.css">
+    <link rel="stylesheet" href="./css/nav.css">
 </head>
 
 <body>
 
-    <ul class="nav p-3">
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#">van Franken</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link active" href="#">How does it work</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Prices</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-        </li>
-        <!-- <li class="nav-item">
-            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li> -->
-    </ul>
-    <!-- 
-    <div class="sticky" id="myTopnav">
-        <div class="topnav">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <h3 class="title"><b>van Franken Car Service</b></h3>
-                </li>
-                <li class="nav-item">
-                    <a href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./howdoesitwork.php">How does it work?</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./prices.php">Prices</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./contact.php">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./login.php">Sign In</a>
-                </li>
-                <li class="nav-item">
-                    <a href="./order/" class="special">Schedule your appointment</a>
-                </li>
-            </ul>
-        </div>
-    </div> -->
+    <div id="navbar" class="sticky"> 
+        <ul id="navfunction"> 
+                <li><p><b class="title">van Franken Car Service</b></p></li> 
+                <li><a href="#">Home</a></li> 
+                <li><a href="./howdoesitwork.php">How does it work?</a></li> 
+                <li><a href="./prices.php">Prices</a></li> 
+                <li><a href="./contact.php">Contact</a></li>
+                <li><a href="./login.php">Login</a></li> 
+            
+            
+        </ul> 
+    </div> 
 
     <div class="image_container">
         <img class="container_image" src="./assets/img/onderhoud_banner_3.png" alt="banner" loading="lazy" style="width:100%; background-attachment: fixed; background-position: center;">
@@ -235,5 +203,12 @@
         </div>
     </footer>
 </body>
+    <script>
+
+        <?php
+        require_once './assets/js/nav.js';
+        ?>
+
+    </script>
 
 </html>

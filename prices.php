@@ -11,22 +11,19 @@
         <title>Prices</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/nav.css">
     </head>
     <body>
-    <div class="sticky" id="myTopnav">
-        <div class="left topnav" >
-            <h3 class="title"><b>van Franken Car Service</b></h3>
-            <a href="./">Home</a>
-            <a href="./howdoesitwork.php">How does it work?</a>
-            <a href="#">Prices</a>
-            <a href="./contact.php">Contact</a>
-            <a href="./login.php">Sign In</a>
-            <a href="./werkplaatsplanner/" class="special">Schedule your appointment</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </div>
+    <div id="navbar" class="sticky"> 
+        <ul class="left" id="navfunction"> 
+            <li><p><b class="title">van Franken Car Service</b></p></li> 
+            <li><a href="./">Home</a></li> 
+            <li><a href="./howdoesitwork.php">How does it work?</a></li> 
+            <li><a href="#">Prices</a></li> 
+            <li><a href="./contact.php">Contact</a></li> 
+            <li><a class="special" href="./login.php">Login</a></li> 
+        </ul> 
+    </div> 
     <div class="container" style="margin-top: 100px">
         <div class="container">
             <div class="row">
@@ -187,6 +184,13 @@
             </div>
         </footer>
     </body>
+    <script>
+
+        <?php
+        require_once './assets/js/nav.js';
+        ?>
+
+    </script>
 </html>
 
 

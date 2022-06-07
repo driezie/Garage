@@ -11,22 +11,19 @@
         <title>Prices</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/nav.css">
     </head>
     <body>
-    <div class="sticky" id="myTopnav">
-        <div class="left topnav" >
-            <h3 class="title"><b>van Franken Car Service</b></h3>
-            <a href="./">Home</a>
-            <a href="./howdoesitwork.php">How does it work?</a>
-            <a href="./prices.php">Prices</a>
-            <a href="#">Contact</a>
-            <a href="./login.php">Sign In</a>
-            <a href="./werkplaatsplanner/" class="special">Schedule your appointment</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </div>
+    <div id="navbar" class="sticky"> 
+        <ul class="left" id="navfunction"> 
+            <li><p><b class="title">van Franken Car Service</b></p></li> 
+            <li><a href="./">Home</a></li> 
+            <li><a href="./howdoesitwork.php">How does it work?</a></li> 
+            <li><a href="./prices.php">Prices</a></li> 
+            <li><a href="#">Contact</a></li> 
+            <li><a class="special" href="./login.php">Login</a></li> 
+        </ul> 
+    </div> 
     <div class="container" style="margin-top: 100px">
         <div class="container">
             <div class="row">
@@ -63,7 +60,7 @@
         <div class="row gutters-4 gutters-lg-6 align-items-center" >
             <div class="col-12 col-lg-10">
                 <h2 class="h3 header">Contact Form</h2>
-                <form class="form" action="contact.php" method="post">
+                <form class="form" action="contact.php" method="post" id="form">
                     <div class="row gutters-3">
                     <div class="col-12 col-md-4">
                         <label for="name">First name</label>
@@ -145,6 +142,13 @@
             </div>
         </footer>
     </body>
+    <script>
+
+        <?php
+        require_once './assets/js/nav.js';
+        ?>
+
+    </script>
 </html>
 
 

@@ -3,7 +3,7 @@
     <head>
         <?php 
             require_once '../config.php'; 
-            require_once './assets/html/head.php'; 
+            require_once './assets/html/head.php';   
         ?>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -11,23 +11,20 @@
         <title>Prices</title>
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/footer.css">
+        <link rel="stylesheet" href="./css/nav.css">
     </head>
     <body>
-    <div class="sticky" id="myTopnav">
-        <div class="left topnav" >
-            <h3 class="title"><b>van Franken Car Service</b></h3>
-            <a href="./">Home</a>
-            <a href="#">How does it work?</a>
-            <a href="./prices.php">Prices</a>
-            <a href="./contact.php">Contact</a>
-            <a href="./login.php">Sign In</a>
-            <a href="./werkplaatsplanner/" class="special">Schedule your appointment</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div>
-    </div>
-    <div class="container mt-5">
+    <div id="navbar" class="sticky"> 
+        <ul class="left" id="navfunction"> 
+            <li><p><b class="title">van Franken Car Service</b></p></li> 
+            <li><a href="./">Home</a></li> 
+            <li><a href="#">How does it work?</a></li> 
+            <li><a href="./prices.php">Prices</a></li> 
+            <li><a href="./contact.php">Contact</a></li> 
+            <li><a class="special" href="./login.php">Login</a></li> 
+        </ul> 
+    </div> 
+    <div class="container" style="margin-top: 100px">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -40,62 +37,22 @@
         </div>
     </div>
 
-        <div class="container">
-            <h2 class="h3 header">
-                How does it work?
-            </h2>
-            <p class="container__text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, nisl nunc euismod nisi, eu porttitor nisl nunc euismod nisi.
-            </p>
-                <div class="row gutters-4 gutters-lg-3 align-items-center" >
-                    <div class="col-12 col-lg-4">
-                        <h3 class="review__name">
-                            Item 1
-                        </h3>
-                        <p class="review__text">
-                            Small description about the price and the item
-                        </p>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <h3 class="review__name">
-                            Item 2
-                        </h3>
-                        <p class="review__text">
-                            Small description about the price and the item
-                        </p>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <h3 class="review__name">
-                            Item 3
-                        </h3>
-                        <p class="review__text">
-                            Small description about the price and the item
-                        </p>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <h3 class="review__name">
-                            Item 4
-                        </h3>
-                        <p class="review__text">
-                            Small description about the price and the item
-                        </p>
-                    </div>
-                    <div class="col-12 col-lg-4">
-                        <h3 class="review__name">
-                            Item 5
-                        </h3>
-                        <p class="review__text">
-                            Small description about the price and the item
-                        </p>
-                    </div>
-                </div>
+
+
+
+    <div class="container">
+        <div class="row gutters-4 gutters-lg-6 align-items-center" >
+            <div class="col-12 col-lg-7">
+                <h2 class="h3 header">How does it work?</h2>
+                <p class="container__text">
+                At van Franken, we want to provide you with the best possible service. Do you have a question, comment or complaint? Do not hesitate and contact us using the form below. We will answer your message as soon as possible.
+                </p>
             </div>
         </div>
+    </div>
 
 
-
-
-        <footer>
+    <footer>
             <div class="container">
             <div class="row align-items-center" >
                 
@@ -145,6 +102,13 @@
             </div>
         </footer>
     </body>
+    <script>
+
+        <?php
+        require_once './assets/js/nav.js';
+        ?>
+
+    </script>
 </html>
 
 
