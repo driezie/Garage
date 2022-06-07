@@ -14,16 +14,23 @@
         <link rel="stylesheet" href="./css/nav.css">
     </head>
     <body>
-    <div id="navbar" class="sticky"> 
-        <ul class="left" id="navfunction"> 
-            <li><p><b class="title">van Franken Car Service</b></p></li> 
-            <li><a href="./">Home</a></li> 
-            <li><a href="./howdoesitwork.php">How does it work?</a></li> 
-            <li><a href="./prices.php">Prices</a></li> 
-            <li><a href="#">Contact</a></li> 
-            <li><a class="special" href="./login.php">Login</a></li> 
-        </ul> 
-    </div> 
+    <?php
+        require_once './assets/html/navbar.php';
+        $array = array(
+            // (Button name , Button link , Button type)
+            // class types: "normal", "special", "disabled",
+            'title' => 'van Franken Car Service',
+            'nav' => array(
+                array('Home', './', 'normal'),
+                array('How does it work?', './howdoesitwork.php', 'normal'),
+                array('Prices', './prices.php', 'normal'),
+                array('Contact', '#', 'normal'),
+                array('Sign in', './login.php', 'normal'),
+                array('Schedule your appointment', './order', 'special'),
+            ),
+        );
+        createnavbar($array);
+    ?>
     <div class="container" style="margin-top: 100px">
         <div class="container">
             <div class="row">
@@ -48,7 +55,7 @@
                 At van Franken, we want to provide you with the best possible service. Do you have a question, comment or complaint? Do not hesitate and contact us using the form below. We will answer your message as soon as possible.
                 </p>
                 <a href="#form" class="btn btn-primary" style='font-size: 15px;'>Contact Form</a>
-                <a href="#" class="btn btn-primary" style='font-size: 15px;'>Our branches</a>
+                <a href="./branches.php" class="btn btn-primary" style='font-size: 15px;'>Our branches</a>
             </div>
             <div class="col-12 col-lg-5">
             <img class="img-fluid" src="./assets/img/working-man.png" alt="banner" loading="lazy" style="width:100%; background-attachment: fixed; background-position: center; border-radius: 20px"  >
@@ -63,13 +70,12 @@
                 <form class="form" action="contact.php" method="post" id="form">
                     <div class="row gutters-3">
                     <div class="col-12 col-md-4">
-                        <label for="name">First name</label>
-                        <!-- est -->
-                        <input type="text" class="form-control" id="name" name="name" placeholder="First name" required>
+                        <label for="fname">First name</label>
+                        <input type="text" class="form-control" id="fname" name="fname" placeholder="First name" required>
                     </div>
                     <div class="col-12 col-md-4">
-                        <label for="email">Last name</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Last name" required>
+                        <label for="lname">Last name</label>
+                        <input type="text" class="form-control" id="lname" name="lname" placeholder="Last name" required>
                     </div>
                     <div class="col-12 col-md-4 ">
                         <label for="email">E-mail address*</label>
@@ -77,8 +83,8 @@
                     </div>
                     <!-- frugioewjkghfbodird -->
                     <div class="col-12 col-md-4 ">
-                        <label for="email">Phone number</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="Phone number" required>
+                        <label for="number">Phone number</label>
+                        <input type="tel" class="form-control" id="phonenumber" name="phonenumber" placeholder="Phone number" required>
                     </div>
                     <br>
                     <div class="col-12 col-md-12">
@@ -93,54 +99,10 @@
     </div>
 
     <footer>
-            <div class="container">
-            <div class="row align-items-center" >
-                
-
-                <div class="col-10 col-lg-5">
-                    <h3 class="h3">
-                        About us
-                    </h3>
-                    <p class="container__text">
-                        We are a small company that offers a service for your car. We are located in the Netherlands and we are open 24/7. For any questions about the car or our service you can use our contact page to get in touch with us.
-                    </p>
-
-                    <a class="btn btn-primary" href="./contact.php" role="button">Contact us</a>
-                </div>
-                <div class="col-12 col-lg-3">
-                    <h3 class="h3">
-                        Navigation
-                    </h3>
-                    <p class="container__text">
-                        <a href="./" >Home</a>
-                    </p>
-                    <p class="container__text">
-                        <a href="./howdoesitwork.php">How does it work?</a>
-                    </p>
-                    <p class="container__text">
-                        <a href="./prices.php">Prices</a>
-                    </p>
-                    <p class="container__text">
-                        <a href="./contact.php">Contact</a>
-                    </p>
-                    <p class="container__text">
-                        <a href="./login.php">Sign In</a>
-                    </p>
-                </div>
-
-                
-            </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <p class="text-muted" style="margin: 0 auto;">
-                            van Franken Car Service, Copyright &copy; 2020
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        <?php 
+        require_once './assets/html/footer.php';
+        ?>
+    </footer>
     </body>
     <script>
 

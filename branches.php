@@ -22,7 +22,7 @@
             'title' => 'van Franken Car Service',
             'nav' => array(
                 array('Home', './', 'normal'),
-                array('How does it work?', '#', 'normal'),
+                array('How does it work?', './howdoesitwork.php', 'normal'),
                 array('Prices', './prices.php', 'normal'),
                 array('Contact', './contact.php', 'normal'),
                 array('Sign in', './login.php', 'normal'),
@@ -37,7 +37,8 @@
                 <div class="col-md-12">
                     <ol class="breadcrumb">
                         <li><a href="./">Home</a></li>
-                        <li class="active">How does it work?</li>
+                        <li><a href="./contact.php">Contact</a></li>
+                        <li class="active">Branches</li>
                     </ol>
                 </div>
             </div>
@@ -50,14 +51,11 @@
     <div class="container">
         <div class="row gutters-4 gutters-lg-6 align-items-center" >
             <div class="col-12 col-lg-7">
-                <h2 class="h3 header">How does it work?</h2>
+                <h2 class="h3 header">Branches</h2>
                 <p class="container__text">
-                You might wonder how does our service work here? Well it's actually really easy. We have a team of mechanics who are always ready to help you. You wil be able to choose multiple issues and we will find the best solution for you to fix the issue you have. 
+                lol why u visiting this page
                 </p>
-                <p class="container__text">
-                After you put in your numberplate and sort car, you will revieve the most recommend fixes for your car. You will always keep updated by our service. This will be shown on the order page. <a href="./customer/myorder">Open here</a>
-                </p>
-                <a class="btn btn-primary" href="./customer/myorder/" role="button">Check your order status</a>
+                <a class="btn btn-primary" href="./contact.php" role="button">Just go back...</a>
 
             </div>
         </div>
