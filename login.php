@@ -73,7 +73,7 @@
         </div>
 
 
-        <footer style="position: fixed;">
+        <footer>
             <div class="container">
             <div class="row align-items-center" >
                 
@@ -125,6 +125,3 @@
 
     </body>
 </html>
-
-
-

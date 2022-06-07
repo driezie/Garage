@@ -5,7 +5,6 @@ require_once '../database/dbh.php';
 
 session_start();
 $dbh = getDB();
-exit();
 
 function alert($type, $title,  $message, $location) {
     // check if location is not empty

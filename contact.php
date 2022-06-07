@@ -67,6 +67,7 @@
                     <div class="row gutters-3">
                     <div class="col-12 col-md-4">
                         <label for="name">First name</label>
+                        <!-- est -->
                         <input type="text" class="form-control" id="name" name="name" placeholder="First name" required>
                     </div>
                     <div class="col-12 col-md-4">
@@ -77,6 +78,7 @@
                         <label for="email">E-mail address*</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="E-mail address*" required>
                     </div>
+                    <!-- frugioewjkghfbodird -->
                     <div class="col-12 col-md-4 ">
                         <label for="email">Phone number</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="Phone number" required>
