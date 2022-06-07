@@ -42,7 +42,7 @@
             <div class="container__lower" style='text-align: center; position: relative; z-index: 100;'>
                 <a href="./order/" class="container_button" style='font-size: 17px;'><b>Schedule maintenance</b></a>
                 <span class="container_text" style='font-size: 17px; padding-left: 10px; padding-right: 10px;'><b> | </b></span>
-                <a href="index.php" class="container_button" style='font-size: 17px;'><b>View reviews</b></a>
+                <a href="#reviews" class="container_button" style='font-size: 17px;'><b>View reviews</b></a>
             </div>
         </div>
     </div>
@@ -115,7 +115,7 @@
         </div>
     </div>
 
-    <div class="container my-5">
+    <div class="container my-5" id="reviews">
         <h2 class="h3 header">
             Reviews
         </h2>
