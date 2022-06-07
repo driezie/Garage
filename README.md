@@ -46,6 +46,7 @@ In dit project maak je gebruik van de volgende vakken en technieken:
 
 ## Functionaliteit
 
+<!-- Voor Jelte en Harm -->
 Website voor klanten: 
 •    Registreren / inloggen
 •    Afspraak plannen met datumpicker. Al gekozen datums zijn niet meer beschikbaar
@@ -54,6 +55,8 @@ Website voor klanten:
 •    Factuur betalen. Dit is alleen een simulatie door op een knop te drukken, geen hele betaalomgeving.
 •    Beoordeling achterlaten (rating / review), zichtbaar voor andere klanten.
 
+
+<!-- voor de Olaf -->
 Applicatie voor de garage:
 •    Receptionist bevestigt de afspraak en kan een overzicht van alle afspraken per dag zien. Ook wijst deze rol de afspraken toe aan een monteur.
 •    De monteur ziet de afspraken die aan hem zijn toegewezen.
