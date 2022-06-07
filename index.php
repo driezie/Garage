@@ -1,106 +1,155 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <?php 
             require_once '../config.php'; 
             require_once './assets/html/head.php'; 
         ?>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <title>Home</title>
         <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/footer.css">
     </head>
     <body>
-        <div class="main-header__nav">
-            <div class="row">
-                <a href="index.php">
-                    <img class="logo__image" src="./img/logo.png" alt="logo van de website">
-                </a>
-                <div class="main-header__nav-menu">
-                <ul>
-                    <li><a class="nav-link" href="#">Hoe werkt het?</a></li>
-                    <li><a class="nav-link" href="#">Prijzen</a></li>
-                    <li><a class="nav-link" href="#">Onze Garage</a></li>
-                    <li><a class="nav-link" href="#">Contact</a></li>
-                    <li><a class="nav-link special" href="./werkplaatsplanner/1.voertuig/">Plan uw afspraak</a></li>
-                </ul>
+
+    <ul class="nav p-3">
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">van Franken</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+    </ul>
+<!-- 
+    <div class="sticky" id="myTopnav">
+        <div class="topnav">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <h3 class="title"><b>van Franken Car Service</b></h3>
+                </li>
+                <li class="nav-item">
+                    <a href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./howdoesitwork.php">How does it work?</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./prices.php">Prices</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./contact.php">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./login.php">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./order/" class="special">Schedule your appointment</a>
+                </li>
+            </ul>
+        </div>
+    </div> -->
+
+        <div class="image_container">
+            <img class="container_image" src="./assets/img/onderhoud_banner_3.png" alt="banner" loading="lazy" style="width:100%; background-attachment: fixed; background-position: center;" >
+            <div class="centered"> 
+            <h1 class="" style='padding: 20px 0 20px 0; font-size: 60px; line-height: 60px;'>van Franken. Forward together.</h1>
+            <div class="container__lower" style= 'text-align: center; position: relative; z-index: 100;'>
+            <a href="./order/" class="container_button" style='font-size: 17px;'><b>Schedule maintenance</b></a>
+            <span class="container_text" style='font-size: 17px; padding-left: 10px; padding-right: 10px;'><b> | </b></span>
+                <a href="index.php" class="container_button" style='font-size: 17px;'><b>View reviews</b></a>
             </div>
             </div>
-            
         </div>
 
-        <div class="container">
-            <img class="container__image" src="./assets/img/onderhoud_banner.png" alt="banner" loading="lazy" style="max-width: 10rem">
-            <div class="row">
-                <h1 class="container__title">Wat wij doen</h1>
-                <p class="container__text">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, urna eu tincidunt consectetur, ipsum nunc euismod nisi, eu tincidunt nisl nunc euismod nisi.
-                </p>
-                <div class="container__lower">
-                <a href="./werkplaatsplanner/1.voertuig/" class="container__button">Plan onderhoudsbeurt</a>
-                    <a href="index.php" class="container__button">Bekijk reviews</a>
+
+        <div class="container mt-5">
+            <div class="d-flex justify-content-center" >
+                <div class="col-12 col-lg-10">
+                    <div class="alert alert-success" role="alert">
+                        👋 <b>Welcome!</b> This website is made by <b>someone</b>, <b>someone</b> & <b>someone</b>.
+                    </div>
+                    <h2 class="header">
+                        Why a maintenance service at Van Franken?
+                    </h2>
+                    <p class="container__text">
+                        For the best maintenance on your car, go to van Franken. Have your car serviced regularly to avoid the risk of expensive repairs.
+                    </p>
+                    <div class="container__list">
+                        <p>✅  A clear price for your maintenance in advance</p>
+                        <p>✅  Free breakdown assistance with maintenance</p>
+                        <p>✅  Free loan bike</p>
+                        <p>✅  Discount on future repairs</p>
+                        <p>✅  Always entitled to replacement transport at a service rate</p>
+                    </div>
                 </div>
-                
             </div>
         </div>
 
-        <div class="container">
-            <h2 class="h3 header">
-                Waarom een onderhoudsbeurt bij van Franken?
-            </h2>
-            <p class="container__text">
-                Voor het beste onderhoud aan uw wagen gaat u naar van Franken. Laat je auto regelmatig onderhouden en voorkom zo de kans op dure reparaties.
-            </p>
-            <div class="container__list">
-                <p>✅  Vooraf een duidelijke prijs voor je onderhoudsbeurt</p>
-                <p>✅  Gratis pechhulp bij onderhoud</p>
-                <p>✅  Gratis leenfiets</p>
-                <p>✅  Korting op toekomstige reparaties</p>
-                <p>✅  Altijd recht op vervangend vervoer tegen servicetarief</p>
+        <div class="container my-5">
+            <div class="row align-items-center">
+                <div class="col-12 col-lg-6">
+                    <img class="img-fluid" src="./assets/img/working-man.png" alt="banner" loading="lazy" style="width:100%; background-attachment: fixed; background-position: center; border-radius: 20px"  >
+                </div>
+                <div class="col-12 col-lg-6">
+                    <h2 class="header">Small maintenance</h2>
+                    <p class="container__text">
+                        For the best maintenance on your car, go to van Franken. Have your car serviced regularly to avoid the risk of expensive repairs.
+                    </p>
+                    <h3 class="h4 smallheader">
+                        When do you need a small maintenance?
+                    </h3>
+                    <p class="container__text">
+                        Does your car need maintenance? Then a small maintenance is the right time to do. This is if you have driven less than 15,000 kilometers or if your car is less than 2 years old. If you have driven more than 15,000 kilometers, a larger service is more suitable for you.
+                    </p>
+                    <a href="./order/" class="btn btn-primary" style='font-size: 15px;'>Schedule your appointment</a>
+                </div>
             </div>
         </div>
 
-
-        <div class="container">
-            <h2 class="h3 header">
-                Kleine beurt
-            </h2>
-            <p class="container__text">
-                Voor het beste onderhoud aan uw wagen gaat u naar van Franken. Laat je auto regelmatig onderhouden en voorkom zo de kans op dure reparaties.
-            </p>
-            <h3 class="h4 smallheader">
-                Wanneer een kleine beurt?
-            </h3>
-            <p class="container__text">
-                Uw auto heeft onderhoud nodig? Dan is een kleine onderhoudsbeurt het juiste moment om te doen. Dit is als u minder dan 15.000 kilometer heeft gereden of uw auto is minder dan 2 jaar. Als u langer dan 15.000 kilometer heeft gereden, dan past een grotere onderhoudsbeurt meer bij u.
-            </p>
-            <a class="btn btn-primary" href="./werkplaatsplanner/1.voertuig/?onderhoud=kleinebeurt" role="button">Plan een kleine beurt</a>
+        <div class="container my-5">
+            <div class="row align-items-center my-5" >
+                <div class="col-12 col-lg-6">
+                    <h2 class="h3 header">
+                        Big maintenance
+                    </h2>
+                    <p class="container__text">
+                        Have you driven more than 15,000 kilometers? Then a major overhaul is the right time to do. Our skilled technicians know everything about your Franken car and will repair your car as quickly as possible. You can always borrow a free loaner bike or borrow a car at a service rate.
+                    </p>
+                    <h3 class="h4 smallheader">
+                        When do you need a big maintenance?
+                    </h3>
+                    <p class="container__text">
+                        Is your car older than 2 years or has it driven more than 15,000 kilometres? Then a major overhaul is the right time to do. We at Van Franken think it is important that every car needs a service every 5 years.
+                    </p>
+                    <a class="btn btn-primary" href="./order/" role="button">Schedule your appointment</a>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <img class="img-fluid" src="./assets/img/working-man-2.png" alt="banner" loading="lazy" style="width:100%; background-attachment: fixed; background-position: center; border-radius: 20px"  >
+                </div>
+            </div>
         </div>
 
-
-        <div class="container">
-            <h2 class="h3 header">
-                Grote beurt
-            </h2>
-            <p class="container__text">
-                Heeft u meer dan 15.000 kilometer gereden? Dan is een grote onderhoudsbeurt het juiste moment om te doen. Onze vakkundige moneurts weten alles van uw Franken auto en zullen uw auto zo snel mogelijk repareren. U kunt altijd een gratis leenfiets lenen of een auto lenen tegen servicetarief.
-            </p>
-            <h3 class="h4 smallheader">
-                Wanneer een grote beurt?
-            </h3>
-            <p class="container__text">
-                Is ur auto ouder dan 2 jaar of heeft meer dan 15.000 kilometer gereden? Dan is een grote onderhoudsbeurt het juiste moment om te doen. Wij als van Franken vinden het belangrijk dat elke auto elke 5 jaar een servicebeurt nodig heeft.
-            </p>
-            <a class="btn btn-primary" href="./werkplaatsplanner/1.voertuig/?onderhoud=grotebeurt" role="button">Plan een grote beurt</a>
-        </div>
-
-        <div class="container">
+        <div class="container my-5">
             <h2 class="h3 header">
                 Reviews
             </h2>
             <p class="container__text">
-                Hier hebben wij voor u een aantal reviews over onze diensten. 
+                Here we have some reviews about our services for you.
             </p>
-            <div class="review container__list">
-                <div class="review-container">
+            <a class="btn btn-primary" href="index.php" role="button">Click for more reviews</a>
+            <div class="row gutters-4 gutters-lg-3 align-items-center" >
+                <div class="col-12 col-lg-4">
                     <h3 class="review__name">
                         J. van het paard
                     </h3>
@@ -108,10 +157,10 @@
                         ⭐⭐⭐⭐⭐
                     </span>
                     <p class="review__text">
-                        Goede service met betaalbare prijzen
+                        Good service with affordable prices
                     </p>
-                <div>
-                <div class="review-container">
+                </div>
+                <div class="col-12 col-lg-4">
                     <h3 class="review__name">
                         H. Kleefman
                     </h3>
@@ -119,10 +168,10 @@
                         ⭐⭐⭐⭐⭐
                     </span>
                     <p class="review__text">
-                        Uitstkend
+                        Excellent
                     </p>
-                <div>
-                <div class="review-container">
+                </div>
+                <div class="col-12 col-lg-4">
                     <h3 class="review__name">
                         P. Meindertsma
                     </h3>
@@ -130,29 +179,60 @@
                         ⭐⭐⭐⭐⭐
                     </span>
                     <p class="review__text">
-                    Afgelopen vrijdagavond mijn Volkswagen naar Jelte gebracht om de klampen te laten vervangen. Ik gaf aan niet eerder te kunnen dan 17:30 uur en dat was geen probleem. Met een uur zou deze klaar zijn. Jelte dankjewel en tot de volgende keer.
-                    </p>
-                <div>
-
+                        Brought my Volkswagen to Driezie last Friday evening to have the cleats replaced. I indicated that I could not arrive earlier than 17:30 and that was no problem. It would be ready in an hour. Thank you and see you next time.                    </p>
+                </div>
             </div>
-            <a class="btn btn-primary" href="index.php" role="button">Klik voor meer reviews</a>
+            </div>
         </div>
+
+        <footer>
+            <div class="container my-5">
+            <div class="row align-items-center" >
+                <div class="col-10 col-lg-5">
+                    <h3 class="h3">
+                        About us
+                    </h3>
+                    <p class="container__text">
+                        We are a small company that offers a service for your car. We are located in the Netherlands and we are open 24/7. For any questions about the car or our service you can use our contact page to get in touch with us.
+                    </p>
+
+                    <a class="btn btn-primary" href="./contact.php" role="button">Contact us</a>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <h3 class="h3">
+                        Navigation
+                    </h3>
+                    <p class="container__text">
+                        <a href="./" >Home</a>
+                    </p>
+                    <p class="container__text">
+                        <a href="./howdoesitwork.php">How does it work?</a>
+                    </p>
+                    <p class="container__text">
+                        <a href="./prices.php">Prices</a>
+                    </p>
+                    <p class="container__text">
+                        <a href="./contact.php">Contact</a>
+                    </p>
+                    <p class="container__text">
+                        <a href="./login.php">Sign In</a>
+                    </p>
+                </div>
+
+                
+            </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted" style="margin: 0 auto;">
+                            van Franken Car Service, Copyright &copy; 2020
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
     </body>
-    <script>
-        /* -- Sticky Navbar -- */
-        const header = document.getElementsByClassName('main-header__nav')[0];
-        
-        function stickyNavbar() {
-            header.classList.toggle('scrolled', window.scrollY > 0);
-            // console.log(window.scrollY);
-        }
-
-        stickyNavbar();
-        window.addEventListener('scroll', stickyNavbar);
-
-        /* -- END OF Sticky Navbar -- */
-
-    </script>
 </html>
 
 
