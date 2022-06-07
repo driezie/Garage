@@ -11,22 +11,26 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
         <title>Dashboard</title>
         <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/nav.css">
         
     </head>
     <body>
-    <div class="sticky" id="myTopnav">
-        <div class="left topnav" >
-            <h3 class="title"><b>van Franken Car Service</b></h3>
-            <a href="#">Dashboard</a>
-            <a href="./appointments/">My appointments</a>
-            <a href="./profile/">My Profile</a>
-            <a href="../assets/actions/action.php?action=logout">Log out</a>
-            <a href="../werkplaatsplanner/" class="special">Schedule new appointment</a>
-            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
-                <i class="fa fa-bars"></i>
-            </a>
-        </div> 
-    </div>
+    <?php
+        require_once '../assets/html/navbar.php';
+        $array = array(
+            // (Button name , Button link , Button type)
+            // class types: "normal", "special", "disabled",
+            'title' => 'van Franken Car Service Dashboard',
+            'nav' => array(
+                array('Home', '#', 'normal'),
+                array('My Orders', './myorder', 'normal'),
+                array('My Profile', './profile', 'normal'),
+                array('Logout', '../assets/actions/action.php?action=logout', 'normal'),
+                array('Schedule your appointment', './order', 'special'),
+            ),
+        );
+        createnavbar($array);
+    ?>
 
     <div class="container" style="margin-top: 100px">
     <!-- breadcrumbs -->
@@ -34,8 +38,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <ol class="breadcrumb">
-                        <!-- <li><a href="./" class="active">Dashboard</a></li> -->
-                        <li class="active">Dashboard</li>
+                        <li><a href="../" class="active">Dashboard</a></li>
+                        <li class="active">My Profile</li>
                     </ol>
                 </div>
             </div>
