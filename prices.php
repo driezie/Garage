@@ -56,7 +56,7 @@
                         <div class="card card1 h-100 w-100 p3">
                             <div class="card-body">
                                 <h3 class="card-title">APK</h3>
-                                <p class='text-normal'>Some small information about it</p>
+                                <!-- <p class='text-normal'>Some small information about it</p> -->
                                 <br>
                                 <span class="h2">€310</span>
                                 <br><br>
@@ -71,8 +71,24 @@
                     <div class="col-lg-4 col-md-12 mb-4">
                         <div class="card card1 h-100">
                             <div class="card-body">
-                                <h3 class="card-title">APK</h3>
-                                <p class='text-normal'>Some small information about it</p>
+                                <h3 class="card-title">Aircocheck</h3>
+                                <!-- <p class='text-normal'>Some small information about it</p> -->
+                                <br>
+                                <span class="h2">€20</span>
+                                <br><br>
+                                <div class="d-grid my-3 button-price">
+                                    <a href='./' class="btn btn-outline-dark btn-block">Select</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                    <!-- Begin Card -->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card card1 h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Air conditioning service</h3>
+                                <!-- <p class='text-normal'>Some small information about it</p> -->
                                 <br>
                                 <span class="h2">€310</span>
                                 <br><br>
@@ -87,8 +103,8 @@
                     <div class="col-lg-4 col-md-12 mb-4">
                         <div class="card card1 h-100">
                             <div class="card-body">
-                                <h3 class="card-title">APK</h3>
-                                <p class='text-normal'>Some small information about it</p>
+                                <h3 class="card-title">Loose tire change (1.5 hours)</h3>
+                                <!-- <p class='text-normal'>Some small information about it</p> -->
                                 <br>
                                 <span class="h2">€310</span>
                                 <br><br>
@@ -103,8 +119,10 @@
                     <div class="col-lg-4 col-md-12 mb-4">
                         <div class="card card1 h-100">
                             <div class="card-body">
-                                <h3 class="card-title">APK</h3>
-                                <p class='text-normal'>Some small information about it</p>
+                                <h3 class="card-title">Summer check</h3>
+                                <p class='text-normal'>
+                                    Our skilled mechanics know your Volkswagen through and through. With an extensive check on no fewer than 20 points, they bring your Volkswagen back in top condition.
+                                </p>
                                 <br>
                                 <span class="h2">€310</span>
                                 <br><br>
@@ -119,8 +137,28 @@
                     <div class="col-lg-4 col-md-12 mb-4">
                         <div class="card card1 h-100">
                             <div class="card-body">
-                                <h3 class="card-title">APK</h3>
-                                <p class='text-normal'>Some small information about it</p>
+                                <h3 class="card-title">Car Damage</h3>
+                                <p class='text-normal'>
+                                    We can check your car for damage and prepare a quote for you. Enter a short description of the damage in the text block and we will contact you.
+                                </p>
+                                <br>
+                                <span class="h2">€310</span>
+                                <br><br>
+                                <div class="d-grid my-3 button-price">
+                                    <a href='./' class="btn btn-outline-dark btn-block">Select</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Card -->
+                    <!-- Begin Card -->
+                    <div class="col-lg-4 col-md-12 mb-4">
+                        <div class="card card1 h-100">
+                            <div class="card-body">
+                                <h3 class="card-title">Repair asterisk in windshield</h3>
+                                <p class='text-normal'>
+                                    Car window damage is only covered by the insurance if your WA+ limited hull or WA+ full hull is insured. The mandatory third-party liability insurance does not cover glass damage.
+                                </p>
                                 <br>
                                 <span class="h2">€310</span>
                                 <br><br>
