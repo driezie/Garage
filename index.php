@@ -19,17 +19,17 @@
             <a class="nav-link disabled" href="#">van Franken</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="#">Active</a>
+            <a class="nav-link active" href="#">How does it work</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">Prices</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#">About</a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
             <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-        </li>
+        </li> -->
     </ul>
 <!-- 
     <div class="sticky" id="myTopnav">
