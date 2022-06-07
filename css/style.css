@@ -89,7 +89,6 @@ body {
     position: relative;
     text-align: center;
     color: white;
-    z-index: -1;
     /* cut background from top */
     /* clip-path: polygon(0 0, 100% 0, 100% 75%, 0 calc(100% - 10vw)); */
 }
@@ -171,7 +170,7 @@ body {
 }
 
 .step-disabled {
-    background-color: #333333; !important;
+    background-color: #333333;
 }
 
 .step-disabled a {
