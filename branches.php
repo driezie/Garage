@@ -50,9 +50,9 @@
             <div class="col-12 col-lg-7">
                 <h2 class="h3 header">Branches</h2>
                 <p class="container__text">
-                    lol why u visiting this page
+                    There is currently not  lot of informtion ono this webpage.
                 </p>
-                <a class="btn btn-primary" href="./contact.php" role="button">Just go back...</a>
+                <a class="btn btn-primary" href="./contact.php" role="button">Return to the contact webpage.</a>
 
             </div>
         </div>

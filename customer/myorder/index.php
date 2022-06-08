@@ -22,6 +22,7 @@
                 array('Home', '../', 'normal'),
                 array('My Orders', '#', 'normal'),
                 array('My Profile', '../profile', 'normal'),
+                array('My Reviews', '../reviews', 'normal'),
                 array('Logout', '?action=logout', 'normal'),
                 array('Schedule your appointment', './order', 'special'),
             ),
