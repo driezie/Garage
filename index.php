@@ -18,6 +18,12 @@
 <body>
 
     <?php
+    // op school
+    $_SESSION['session_id'] = '1';
+    $_SESSION['session_email'] = 'officialjustdevv@gmail.com';
+    $_SESSION['session_role'] = '1';
+    //  link naar dashboard: http://localhost/Projecten/Garage/public/customer/?action=green&message=You%20logged%20in%20successfully!&title=%F0%9F%A5%B3%20Logged%20in!
+
         require_once './assets/html/navbar.php';
         $array = array(
             // (Button name , Button link , Button type)
@@ -26,7 +32,7 @@
             'nav' => array(
                 array('Home', '#', 'normal'),
                 array('How does it work?', './howdoesitwork.php', 'normal'),
-                array('Prices', './prices.php', 'normal'),
+                array('Prices', './prices.php', 'disabled'),
                 array('Contact', './contact.php', 'normal'),
                 array('Sign in', './login.php', 'normal'),
                 array('Schedule your appointment', './order', 'special'),
