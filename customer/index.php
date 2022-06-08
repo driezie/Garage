@@ -2,7 +2,6 @@
 <html>
     <head>
         <?php 
-            require_once '../../config.php'; 
             require_once '../assets/html/head.php'; 
             
         ?>
@@ -16,7 +15,6 @@
     </head>
     <body>
     <?php
-        require_once '../assets/html/navbar.php';
         $array = array(
             // (Button name , Button link , Button type)
             // class types: "normal", "special", "disabled",
@@ -25,7 +23,7 @@
                 array('Home', '#', 'normal'),
                 array('My Orders', './myorder', 'normal'),
                 array('My Profile', './profile', 'normal'),
-                array('Logout', '../assets/actions/action.php?action=logout', 'normal'),
+                array('Logout', '?action=logout', 'normal'),
                 array('Schedule your appointment', './order', 'special'),
             ),
         );
@@ -51,7 +49,7 @@
             <div class="col-12 col-lg-9">
 
                 <!-- This is the alert box. If there is a notification it will be displayed using the alert -->
-                <?php require_once '../assets/html/alert.php'; alert(); ?>
+                <?php alert_session(); ?>
 
                 <h2 class="h3 header">Dashboard</h2>
                 <p class="container__text">Welcome to the dashboard website. Here you can see and track all your appointments you have created.</p>
@@ -73,7 +71,7 @@
                     
                 </div>
                 <!-- Here you will recieve your latest data from the appointment you created. If you havent added an appointment, it will show a button for you to enter -->
-                <form class = "login" action="../assets/actions/action.php?action=logout" id='login' method="post">
+                <form class = "login" action="?action=logout" id='login' method="post">
                     <div class="form-row"><button type="submit" class="btn btn-primary">Log out</button></div>
                 </form>
             </div>

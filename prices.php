@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <?php 
-            require_once '../config.php'; 
             require_once './assets/html/head.php'; 
         ?>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
