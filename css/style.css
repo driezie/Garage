@@ -215,3 +215,10 @@ body {
     background-color: #f2f2f2;
     color: var(--text-color);
 }
+
+
+.card-body{
+    display: flex;
+    flex-direction: column;   
+    justify-content: space-between; 
+}

@@ -17,11 +17,7 @@
 <body>
 
     <?php
-    // op school
-    // $_SESSION['session_id'] = '1';
-    // $_SESSION['session_email'] = 'officialjustdevv@gmail.com';
-    // $_SESSION['session_role'] = '1';
-    //  link naar dashboard: http://localhost/Projecten/Garage/public/customer/?action=green&message=You%20logged%20in%20successfully!&title=%F0%9F%A5%B3%20Logged%20in!
+
     $array = array(
         // (Button name , Button link , Button type)
         // class types: "normal", "special", "disabled",
@@ -55,7 +51,7 @@
         <div class="d-flex justify-content-center">
             <div class="col-12 col-lg-10">
                 <div class="alert alert-success" role="alert">
-                    👋 <b>Welcome!</b> This website is made by <b>someone</b>, <b>someone</b> & <b>someone</b>.
+                    👋 <b>Welcome!</b> This website is made by <b>someone</b>, <b>someone</b> !& <b>someone</b>.
                 </div>
                 <h2 class="header">
                     Why a maintenance service at Van Franken?
