@@ -33,7 +33,7 @@
         'nav' => array(
             array('Home', '#', 'normal'),
             array('How does it work?', './howdoesitwork.php', 'normal'),
-            array('Prices', './prices.php', 'disabled'),
+            array('Prices', './prices.php', 'normal'),
             array('Contact', './contact.php', 'normal'),
             array('Sign in', './login.php', 'normal'),
             array('Schedule your appointment', './order', 'special'),
