@@ -134,28 +134,33 @@
 
             <?php
 
-            require_once 'assets/actions/getfromdatabase.php';
-
-            $reviews = getFromDB('users.first_name, users.last_name, reviews.content, reviews.stars, reviews.header', 'reviews join users on users.klnr = reviews.user_id', '1 ORDER by reviews.stars DESC LIMIT 6');
-
-            foreach ($reviews as $review) {
-                echo '<div class="col-12 col-lg-4">';
-                echo '<h3 class="review__name">';
-                echo $review['first_name'] . ' ' . $review['last_name'];
-                echo '</h3>';
-                echo '<p class="review__stars">';
-                for ($i = 0; $i < $review['stars']; $i++) {
-                    echo '⭐';
+            try {
+                require_once 'assets/actions/getfromdatabase.php';
+    
+                $reviews = getFromDB('users.first_name, users.last_name, reviews.content, reviews.stars, reviews.header', 'reviews join users on users.klnr = reviews.user_id', '1 ORDER by reviews.stars DESC LIMIT 6');
+    
+                foreach ($reviews as $review) {
+                    echo '<div class="col-12 col-lg-4">';
+                    echo '<h3 class="review__name">';
+                    echo $review['first_name'] . ' ' . $review['last_name'];
+                    echo '</h3>';
+                    echo '<p class="review__stars">';
+                    for ($i = 0; $i < $review['stars']; $i++) {
+                        echo '⭐';
+                    }
+                    echo '</p>';
+                    echo '<h4 class="review__header">';
+                    echo $review['header'];
+                    echo '</h4>';
+                    echo '<p class="review__text">';
+                    echo $review['content'];
+                    echo '</p>';
+                    echo '</div>';
                 }
-                echo '</p>';
-                echo '<h4 class="review__header">';
-                echo $review['header'];
-                echo '</h4>';
-                echo '<p class="review__text">';
-                echo $review['content'];
-                echo '</p>';
-                echo '</div>';
+            } catch (Exception $e) {
+                echo '<h2>Geen reviews</h2>'. $e->getMessage();
             }
+
 
             ?>
         </div>
