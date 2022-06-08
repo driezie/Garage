@@ -5,7 +5,7 @@
     <?php
     require_once '../config.php';
     require_once './assets/html/head.php';
-    require_once './assets/database/dbh.php';
+    // require_once './assets/actions/functions.php';
     ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -134,7 +134,7 @@
 
             <?php
 
-                require_once 'assets/actions/getfromdatabase.php';
+                // require_once '';
 
                 $reviews = getFromDB('users.first_name, users.last_name, reviews.content, reviews.stars', 'reviews', '1 join users on users.id = reviews.user_id');
 

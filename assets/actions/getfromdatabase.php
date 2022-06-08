@@ -1,6 +1,21 @@
 <?php
+require_once '../../../config.php';
 
-// require_once '../database/dbh.php';
+function getDB() {
+    $host = DB_HOST;
+    $dbname = DB_NAME;
+    $user = DB_USER;
+    $pass = DB_PASS;
+
+    // echo $host.$dbname.$user.$pass; 
+
+
+    $dbh = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
+    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    return $dbh;
+}
+
+
 
 // Data uit de database halen met deze handige functie. 
 function getFromDB($what = "*", $table = "users", $where = "1", $debug = FALSE)
