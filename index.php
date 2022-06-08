@@ -25,21 +25,21 @@
     // $_SESSION['session_role'] = '1';
     //  link naar dashboard: http://localhost/Projecten/Garage/public/customer/?action=green&message=You%20logged%20in%20successfully!&title=%F0%9F%A5%B3%20Logged%20in!
 
-        require_once './assets/html/navbar.php';
-        $array = array(
-            // (Button name , Button link , Button type)
-            // class types: "normal", "special", "disabled",
-            'title' => 'van Franken Car Service',
-            'nav' => array(
-                array('Home', '#', 'normal'),
-                array('How does it work?', './howdoesitwork.php', 'normal'),
-                array('Prices', './prices.php', 'disabled'),
-                array('Contact', './contact.php', 'normal'),
-                array('Sign in', './login.php', 'normal'),
-                array('Schedule your appointment', './order', 'special'),
-            ),
-        );
-        createnavbar($array);
+    require_once './assets/html/navbar.php';
+    $array = array(
+        // (Button name , Button link , Button type)
+        // class types: "normal", "special", "disabled",
+        'title' => 'van Franken Car Service',
+        'nav' => array(
+            array('Home', '#', 'normal'),
+            array('How does it work?', './howdoesitwork.php', 'normal'),
+            array('Prices', './prices.php', 'disabled'),
+            array('Contact', './contact.php', 'normal'),
+            array('Sign in', './login.php', 'normal'),
+            array('Schedule your appointment', './order', 'special'),
+        ),
+    );
+    createnavbar($array);
     ?>
 
     <div class="image_container">
@@ -130,29 +130,32 @@
             Here we have some reviews about our services for you.
         </p>
         <a class="btn btn-primary" href="index.php" role="button">Click for more reviews</a>
-        <div class="row gutters-4 gutters-lg-3 align-items-center">
+        <div class="row gutters-4 gutters-lg-3 align-items-center review-container">
 
             <?php
 
-                // require_once '';
+            require_once 'assets/actions/getfromdatabase.php';
 
-                $reviews = getFromDB('users.first_name, users.last_name, reviews.content, reviews.stars', 'reviews', '1 join users on users.id = reviews.user_id');
+            $reviews = getFromDB('users.first_name, users.last_name, reviews.content, reviews.stars, reviews.header', 'reviews join users on users.klnr = reviews.user_id', '1 ORDER by reviews.stars DESC LIMIT 6');
 
-                foreach ($reviews as $review) {
-                    echo '<div class="col-12 col-lg-4">';
-                    echo '<h3 class="review__name">';
-                    echo $review['first_name'] . ' ' . $review['last_name'];
-                    echo '</h3>';
-                    echo '<p class="review__stars">';
-                    for ($i = 0; $i < $review['stars']; $i++) {
-                        echo '⭐';
-                    }
-                    echo '</p>';
-                    echo '<p class="review__text">';
-                    echo $review['content'];
-                    echo '</p>';
-                    echo '</div>';
+            foreach ($reviews as $review) {
+                echo '<div class="col-12 col-lg-4">';
+                echo '<h3 class="review__name">';
+                echo $review['first_name'] . ' ' . $review['last_name'];
+                echo '</h3>';
+                echo '<p class="review__stars">';
+                for ($i = 0; $i < $review['stars']; $i++) {
+                    echo '⭐';
                 }
+                echo '</p>';
+                echo '<h4 class="review__header">';
+                echo $review['header'];
+                echo '</h4>';
+                echo '<p class="review__text">';
+                echo $review['content'];
+                echo '</p>';
+                echo '</div>';
+            }
 
             ?>
         </div>
@@ -160,17 +163,15 @@
     </div>
 
     <footer>
-        <?php 
+        <?php
         require_once './assets/html/footer.php';
         ?>
     </footer>
 </body>
-    <script>
-
-        <?php
-        require_once './assets/js/nav.js';
-        ?>
-
-    </script>
+<script>
+    <?php
+    require_once './assets/js/nav.js';
+    ?>
+</script>
 
 </html>
