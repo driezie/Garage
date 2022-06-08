@@ -131,38 +131,30 @@
         </p>
         <a class="btn btn-primary" href="index.php" role="button">Click for more reviews</a>
         <div class="row gutters-4 gutters-lg-3 align-items-center">
-            <div class="col-12 col-lg-4">
-                <h3 class="review__name">
-                    J. van het paard
-                </h3>
-                <span class="review__stars">
-                    ⭐⭐⭐⭐⭐
-                </span>
-                <p class="review__text">
-                    Good service with affordable prices
-                </p>
-            </div>
-            <div class="col-12 col-lg-4">
-                <h3 class="review__name">
-                    H. Kleefman
-                </h3>
-                <span class="review__stars">
-                    ⭐⭐⭐⭐⭐
-                </span>
-                <p class="review__text">
-                    Excellent
-                </p>
-            </div>
-            <div class="col-12 col-lg-4">
-                <h3 class="review__name">
-                    P. Meindertsma
-                </h3>
-                <span class="review__stars">
-                    ⭐⭐⭐⭐⭐
-                </span>
-                <p class="review__text">
-                    Brought my Volkswagen to Driezie last Friday evening to have the cleats replaced. I indicated that I could not arrive earlier than 17:30 and that was no problem. It would be ready in an hour. Thank you and see you next time. </p>
-            </div>
+
+            <?php
+
+                require_once '';
+
+                $reviews = getFromDB('users.first_name, users.last_name, reviews.content, reviews.stars', 'reviews', '1 join users on users.id = reviews.user_id');
+
+                foreach ($reviews as $review) {
+                    echo '<div class="col-12 col-lg-4">';
+                    echo '<h3 class="review__name">';
+                    echo $review['first_name'] . ' ' . $review['last_name'];
+                    echo '</h3>';
+                    echo '<p class="review__stars">';
+                    for ($i = 0; $i < $review['stars']; $i++) {
+                        echo '⭐';
+                    }
+                    echo '</p>';
+                    echo '<p class="review__text">';
+                    echo $review['content'];
+                    echo '</p>';
+                    echo '</div>';
+                }
+
+            ?>
         </div>
     </div>
     </div>
