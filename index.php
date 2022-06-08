@@ -3,9 +3,7 @@
 
 <head>
     <?php
-    require_once '../config.php';
     require_once './assets/html/head.php';
-    // require_once './assets/actions/functions.php';
     ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -24,8 +22,6 @@
     // $_SESSION['session_email'] = 'officialjustdevv@gmail.com';
     // $_SESSION['session_role'] = '1';
     //  link naar dashboard: http://localhost/Projecten/Garage/public/customer/?action=green&message=You%20logged%20in%20successfully!&title=%F0%9F%A5%B3%20Logged%20in!
-
-    require_once './assets/html/navbar.php';
     $array = array(
         // (Button name , Button link , Button type)
         // class types: "normal", "special", "disabled",
@@ -135,7 +131,6 @@
             <?php
 
             try {
-                require_once 'assets/actions/getfromdatabase.php';
     
                 $reviews = getFromDB('users.first_name, users.last_name, reviews.content, reviews.stars, reviews.header', 'reviews join users on users.klnr = reviews.user_id', '1 ORDER by reviews.stars DESC LIMIT 6');
     
@@ -160,8 +155,6 @@
             } catch (Exception $e) {
                 echo '<h2>Geen reviews</h2>'. $e->getMessage();
             }
-
-
             ?>
         </div>
     </div>
