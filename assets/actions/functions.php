@@ -1,7 +1,7 @@
 <?php
 
 // require_once '../../../config.php';
-require_once './database/dbh.php';
+require_once './getfromdatabase.php';
 
 session_start();
 $dbh = getDB();
