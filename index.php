@@ -133,7 +133,7 @@
 
             <?php
 
-                require_once '';
+                require_once 'assets/actions/getfromdatabase.php';
 
                 $reviews = getFromDB('users.first_name, users.last_name, reviews.content, reviews.stars', 'reviews', '1 join users on users.id = reviews.user_id');
 
