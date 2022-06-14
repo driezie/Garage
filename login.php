@@ -34,7 +34,7 @@
             array('Prices', './prices.php', 'normal'),
             array('Contact', './contact.php', 'normal'),
             array('Sign in', '#', 'normal'),
-            array('Schedule your appointment', './order', 'special'),
+            array('Schedule your appointment', './order/?step=1', 'special'),
         ),
     );
     createnavbar($array);
@@ -63,7 +63,7 @@
                     Sign in
                 </h2>
                 <p class="container__text">
-                    Sign in here with your created account. Don't have an account yet? Then you must make an appointment. <a href="./werkplaatsplanner/1.voertuig/">Click here to make an appointment</a>
+                    Sign in here with your created account. Don't have an account yet? Please register using a new account <a href="./register.php">here</a>.
                 </p>
                 <form class="login" action="login.php?action=login" id='login' method="post">
                     <div class="form-row" style="max-width: 300px; margin-bottom: 10px;">

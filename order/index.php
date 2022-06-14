@@ -1,95 +1,197 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <?php 
-            require_once '../assets/html/head.php';  
-        ?>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-        <title>Dashboard</title>
-        <link rel="stylesheet" href="../css/style.css">
-        <link rel="stylesheet" href="../css/nav.css">
-        
-    </head>
-    <body>
+
+<head>
+
+
     <?php
-        $array = array(
-            // (Button name , Button link , Button type)
-            // class types: "normal", "special", "disabled",
-            'title' => 'van Franken Car Service Dashboard',
-            'nav' => array(
-                array('Home', '../', 'normal'),
-                array('My Orders', '../myorder', 'normal'),
-                array('My Profile', '.', 'normal'),
-                array('My Reviews', '../reviews', 'normal'),
-                array('Logout', '?action=logout', 'normal'),
-                array('Schedule your appointment', './order', 'special'),
-            ),
-        );
-        createnavbar($array);
+    require_once '../assets/html/head.php';
+    ?>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/nav.css">
+
+</head>
+
+<body>
+    <?php require_once '../assets/html/bottom_of_file.php'; ?>
+
+    <?php
+    $array = array(
+        // (Button name , Button link , Button type)
+        // class types: "normal", "special", "disabled",
+        'title' => 'van Franken Car Service',
+        'nav' => array(
+            array('Return to Home', '../', 'normal'),
+
+        ),
+    );
+    createnavbar($array);
     ?>
 
     <div class="container" style="margin-top: 100px">
-    <!-- breadcrumbs -->
+        <!-- breadcrumbs -->
         <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <ol class="breadcrumb">
-                        <li><a href="../" class="active">Home</a></li>
-                        <li class="active">Schedule your appointment - Step 2: My Account</li>
-                    </ol>
-                </div>
+            <div class="col-md-12">
+                <ol class="breadcrumb">
+                    <li><a href="../" class="active">Home</a></li>
+                    <?php if (($_GET['step'] == 1)) { ?>
+                        <li class="active">Schedule your appointment - Step 1: My Account</li>
+                    <?php } elseif (($_GET['step'] == 2)) { ?>
+                        <li class="active">Schedule your appointment - Step 2: Vehicle Information</li>
+                    <?php } elseif (($_GET['step'] == 3)) { ?>
+                        <li class="active">Schedule your appointment - Step 3: Sort problem</li>
+                    <?php } elseif (($_GET['step'] == 4)) { ?>
+                        <li class="active">Schedule your appointment - Step 4: Date and time</li>
+                    <?php } ?>
+                </ol>
             </div>
         </div>
+    </div>
     </div>
 
     <div class="container">
+        <?php
+        if (isset($_SESSION['order'])) {
 
-        <!-- Step 1 -->
-        <div class="col-12 col-lg-7">
-            <h2 class="h3 header">Step 1: Vehicle Information</h2>
-            <div class="form-row" style="max-width: 400px; margin-bottom: 10px;">
-                <label for="firstname">Please enter your valid lincense plate</label>
-                <input type="text" class="form-control" name='name' id="name" placeholder="Enter lincense plate"maxlength="7">
+            echo '<div class="alert alert-success" role="alert" style="margin: 10px;">';
+            echo '<b>Data:</b>';
+            echo '<pre>';
+
+            print_r($_SESSION['order']);
+            echo '</pre>';
+            echo '</div>';
+        }
+
+        ?>
+
+
+
+    <!-- Start step 1 -->
+    <?php if (($_GET['step'] == 1)) {
+
+        if (!isLoggedIn()) {
+
+            progress_step(1); ?>
+            <div class="col-12 col-lg-7">
+                <h2 class="h3 header">Step 1: My Account</h2>
+
+                <p class="container__text">Please login using your account. Have no account? Create one <a href="../register">here</a>.</p>
+                <div class="form-row">
+                    <button type="submit" class="btn btn-primary" onclick="window.location.href='../login.php?order=true'">Log in</button>
+                    <button type="submit" class="btn btn-primary" onclick="window.location.href='../registar'">Create a new account</button>
+                </div>
             </div>
-            <div class="form-row">
-                <button type="submit" class="btn btn-primary">Next Step</button>
+        <?php } else {
+            progress_step(1);
+            alert('green', '🥳 Already logged in!', 'You are already logged in so you skipped step 1', '?step=2', '&');
+        }
+    } elseif (($_GET['step'] == 2)) {  ?>
+    <?php
+            alert_session();
+            ?>
+        <div class="col-12 col-lg-7">
+            
+            <h2 class="h3 header">Step 2: Vehicle Information</h2>
+            <div class="form-row" style="max-width: 400px; margin-bottom: 10px;">
+            <form action="index.php?step=3" method="post">
+                <label for="firstname">Please enter your valid lincense plate</label>
+                <input type="text" class="form-control" name='numberplate' id="name" placeholder="Enter lincense plate" maxlength="7">
+                <div class="form-row">
+                    <button type="submit" name="order_step_2" class="btn btn-primary">Next Step</button>
+                </div>
+            </form>
             </div>
         </div>
-        <!-- End of Step 1 -->
+        <!-- Einde step 2 | Start step 3 -->
+    <?php } elseif (($_GET['step'] == 3)) {  ?>
+        <?php progress_step(2); ?>
 
-
-        <!-- Step 2 -->
-        <!-- Asks if user wants to stay logged in or log in on a new account or create a new account. -->
-        <!-- <div class="col-12 col-lg-7">
-            <h2 class="h3 header">Step 2: My Account</h2>
-            <p class="container__text">We see that you are already logged in on <b>Officialjustdevv@gmail.com</b>. Would you like to continue or log in to another account?</p>
+        <div class="col-12 col-lg-7">
+            <h2 class="h3 header">Step 3: Sort problem</h2>
+            <!-- create a list with issues  -->
+            <ul>
+                <li>
+                    <input type="checkbox" name="vehicle" value="1">
+                    <label for="vehicle">Vehicle is broken</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="vehicle" value="2">
+                    <label for="vehicle">Vehicle is not working</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="vehicle" value="3">
+                    <label for="vehicle">Vehicle is not working</label>
+                </li>
+                <li>
+                    <input type="checkbox" name="vehicle" value="4">
+                    <label for="vehicle">Vehicle is not working</label>
+                </li>
+            </ul>
             <div class="form-row">
-                <button type="submit" class="btn btn-primary" onclick="window.location.href='../myorder'">Continue</button>
-                <button type="submit" class="btn btn-primary" onclick="window.location.href='../'">Log in on another account</button>
-                <button type="submit" class="btn btn-primary" onclick="window.location.href='../'">Create a new account</button>
-            </div>   
-        </div> -->
-        <!-- End of Step 2 -->
+                    <button type="submit" name="order_step_2" class="btn btn-primary">Next Step aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</button>
+                </div>
+        </div>
+        <!-- Einde step 3 | Start step 4 -->
+    <?php } elseif (($_GET['step'] == 4)) { ?>
+        <div class="col-12 col-lg-7">
+            <h2 class="h3 header">Step 4: Date and time</h2>
+            <div class="form-row">
+                <label for="firstname">Date</label>
+                <input type="date" class="form-control" name='name' id="datetimepicker" placeholder="Enter date">
+            </div>
+            <div class="form-row">
+                <label for="firstname">Time</label>
+                <input type="time" class="form-control" name='name' id="name" placeholder="Enter time">
+            </div>
 
-        <div class="col-12 col-lg-5">
-            <h2 class="h3 header">Steps:</h2>
-            <p class="container__text">Step 1: Vehicle Information</p>
-            <p class="container__text"><b>Step 2: My Account</b></p>
+        </div>
+    <?php } ?>
+    <!-- Einde step 4 -->
+
+    <div class="col-12 col-lg-5">
+        <h2 class="h3 header">Steps:</h2>
+        <?php if (($_GET['step'] == 1)) { ?>
+            <p class="container__text"><b>Step 1: My Account</b></p>
+            <p cdownlass="container__text">Step 2: Vehicle Information</p>
             <p class="container__text">Step 3: Sort problem</p>
             <p class="container__text">Step 4: Date and time</p>
-            </p>
+        <?php } elseif (($_GET['step'] == 2)) { ?>
+            <p class="container__text">Step 1: My Account</p>
+            <p cdownlass="container__text"><b>Step 2: Vehicle Information</b></p>
+            <p class="container__text">Step 3: Sort problem</p>
+            <p class="container__text">Step 4: Date and time</p>
+        <?php } elseif (($_GET['step'] == 3)) { ?>
+            <p class="container__text">Step 1: My Account</p>
+            <p cdownlass="container__text">Step 2: Vehicle Information</p>
+            <p class="container__text"><b>Step 3: Sort problem</b></p>
+            <p class="container__text">Step 4: Date and time</p>
+        <?php } elseif (($_GET['step'] == 4)) { ?>
+            <p class="container__text">Step 1: My Account</p>
+            <p cdownlass="container__text">Step 2: Vehicle Information</p>
+            <p class="container__text">Step 3: Sort problem</p>
+            <p class="container__text"><b>Step 4: Date and time</b></p>
+        <?php } ?>
 
-        </div>
+        </p>
 
-        <!-- <p class="container__text">Here is your appointment list</p> -->
-        </div>
-        </div>
     </div>
-        
-    </body>
+
+    <!-- <p class="container__text">Here is your appointment list</p> -->
+    </div>
+    </div>
+    </div>
+
+</body>
+<script>
+    $('#datetimepicker').datetimepicker({
+        minView: 2,
+        pickTime: false
+    });
+</script>
+
+
 </html>
-
-
-

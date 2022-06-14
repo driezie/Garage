@@ -18,6 +18,9 @@
 
     <?php
 
+    // clears the form data
+    $_SESSION['data'] = array();
+
     $array = array(
         // (Button name , Button link , Button type)
         // class types: "normal", "special", "disabled",
@@ -28,7 +31,7 @@
             array('Prices', './prices.php', 'normal'),
             array('Contact', './contact.php', 'normal'),
             array('Sign in', './login.php', 'normal'),
-            array('Schedule your appointment', './order', 'special'),
+            array('Schedule your appointment', './order/?step=1', 'special'),
         ),
     );
     createnavbar($array);
@@ -86,7 +89,7 @@
                 <p class="container__text">
                     Does your car need maintenance? Then a small maintenance is the right time to do. This is if you have driven less than 15,000 kilometers or if your car is less than 2 years old. If you have driven more than 15,000 kilometers, a larger service is more suitable for you.
                 </p>
-                <a href="./order/" class="btn btn-primary" style='font-size: 15px;'>Schedule your appointment</a>
+                <a href="./order/?step=1" class="btn btn-primary" style='font-size: 15px;'>Schedule your appointment</a>
             </div>
         </div>
     </div>
@@ -106,7 +109,7 @@
                 <p class="container__text">
                     Is your car older than 2 years or has it driven more than 15,000 kilometres? Then a major overhaul is the right time to do. We at Van Franken think it is important that every car needs a service every 5 years.
                 </p>
-                <a class="btn btn-primary" href="./order/" role="button">Schedule your appointment</a>
+                <a class="btn btn-primary" href="./order/?step=1" role="button">Schedule your appointment</a>
             </div>
             <div class="col-12 col-lg-6">
                 <img class="img-fluid" src="./assets/img/working-man-2.png" alt="banner" loading="lazy" style="width:100%; background-attachment: fixed; background-position: center; border-radius: 20px">
@@ -131,7 +134,7 @@
                 $reviews = getFromDB('users.first_name, users.last_name, reviews.content, reviews.stars, reviews.header', 'reviews join users on users.klnr = reviews.user_id', '1 ORDER by reviews.stars DESC LIMIT 6');
     
                 foreach ($reviews as $review) {
-                    echo '<div class="col-12 col-lg-4">';
+                    echo '<div class="review-col">';
                     echo '<h3 class="review__name">';
                     echo $review['first_name'] . ' ' . $review['last_name'];
                     echo '</h3>';

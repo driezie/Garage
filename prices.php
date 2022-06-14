@@ -25,7 +25,7 @@
             <li><a href="#">Prices</a></li>
             <li><a href="./contact.php">Contact</a></li>
             <li><a href="./login.php">Sign in</a></li>
-            <li><a class="special" href="./order/">Schedule your appointment</a></li>
+            <li><a class="special" href="./order/?step=1">Schedule your appointment</a></li>
         </ul>
     </div>
     <div class="container" style="margin-top: 100px">

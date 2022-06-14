@@ -26,7 +26,7 @@
             array('Prices', './prices.php', 'normal'),
             array('Contact', './contact.php', 'normal'),
             array('Sign in', './login.php', 'normal'),
-            array('Schedule your appointment', './order', 'special'),
+            array('Schedule your appointment', './order/?step=1', 'special'),
         ),
     );
     createnavbar($array);
