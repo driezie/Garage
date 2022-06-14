@@ -121,7 +121,7 @@
                             </div>
                         </div>
                     </div>
-                </div>n
+                </div>
 
 
                 <!-- End Card -->
