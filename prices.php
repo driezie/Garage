@@ -96,7 +96,7 @@
                                     <a href='./' class="btn btn-outline-dark btn-block">Select</a>
                                 </div>
                             </div>
-                        </div>
+                        </div>d
                     </div>
                     <!-- End Card -->
                     <!-- Begin Card -->
