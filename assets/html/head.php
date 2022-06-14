@@ -1,6 +1,9 @@
 <?php
 // requires
-require_once '/xampp/htdocs/Projecten/Garage/public/assets/actions/functions.php';
+// require_once '/xampp/htdocs/Projecten/Garage/public/assets/actions/functions.php';
+// require_once '/xampp/htdocs/3-leerjaar-2/projecten/6%20-%20garage/public/assets/actions/functions.php';
+require_once '/xampp/htdocs/3-leerjaar-2/projecten/6 - garage/public/assets/actions/functions.php';
+
 
 if (isset($_GET['action'])) {
     if ($_GET['action'] == 'logout') {
@@ -18,6 +21,8 @@ if (isset($_GET['action'])) {
 <meta name="keywords" content=SITE_KEYWORDS />
 <meta name="description" content=SITE_DESCRIPTION />
 <meta name="author" content=SITE_AUTHOR />
+
+
 
 <?php
 
