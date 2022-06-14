@@ -7,6 +7,7 @@
 /* Path: projects\simple-portfolio\css\style.css */
 
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+
 :root {
     --bg-color-1: #f2f2f2;
     --navbar-color: #000000;
@@ -34,8 +35,8 @@ body {
 }
 
 .topnav a.special {
-    padding: 10px 18px; 
-    margin: 8px 0px 0px 10px; 
+    padding: 10px 18px;
+    margin: 8px 0px 0px 10px;
     border: 2px solid rgba(6, 26, 34, .1);
     border-radius: 100px;
     height: 100%;
@@ -214,4 +215,50 @@ body {
 .button-price a {
     background-color: #f2f2f2;
     color: var(--text-color);
+}
+
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.review-container {
+    min-width: 100%;
+    min-height: max-content;
+    overflow: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
+.review-container .review-col {
+    width: 33.333%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+
+    background: #e1e1e1;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #d1d1d1;
 }

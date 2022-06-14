@@ -3,7 +3,6 @@
 
 <head>
     <?php
-    require_once '../config.php';
     require_once './assets/html/head.php';
     ?>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -18,21 +17,24 @@
 <body>
 
     <?php
-        require_once './assets/html/navbar.php';
-        $array = array(
-            // (Button name , Button link , Button type)
-            // class types: "normal", "special", "disabled",
-            'title' => 'van Franken Car Service',
-            'nav' => array(
-                array('Home', '#', 'normal'),
-                array('How does it work?', './howdoesitwork.php', 'normal'),
-                array('Prices', './prices.php', 'normal'),
-                array('Contact', './contact.php', 'normal'),
-                array('Sign in', './login.php', 'normal'),
-                array('Schedule your appointment', './order', 'special'),
-            ),
-        );
-        createnavbar($array);
+
+    // clears the form data
+    $_SESSION['data'] = array();
+
+    $array = array(
+        // (Button name , Button link , Button type)
+        // class types: "normal", "special", "disabled",
+        'title' => 'van Franken Car Service',
+        'nav' => array(
+            array('Home', '#', 'normal'),
+            array('How does it work?', './howdoesitwork.php', 'normal'),
+            array('Prices', './prices.php', 'normal'),
+            array('Contact', './contact.php', 'normal'),
+            array('Sign in', './login.php', 'normal'),
+            array('Schedule your appointment', './order/?step=1', 'special'),
+        ),
+    );
+    createnavbar($array);
     ?>
 
     <div class="image_container">
@@ -52,7 +54,7 @@
         <div class="d-flex justify-content-center">
             <div class="col-12 col-lg-10">
                 <div class="alert alert-success" role="alert">
-                    👋 <b>Welcome!</b> This website is made by <b>someone</b>, <b>someone</b> & <b>someone</b>.
+                    👋 <b>Welcome!</b> This website is made by <b>someone</b>, <b>someone</b> !& <b>someone</b>.
                 </div>
                 <h2 class="header">
                     Why a maintenance service at Van Franken?
@@ -87,7 +89,7 @@
                 <p class="container__text">
                     Does your car need maintenance? Then a small maintenance is the right time to do. This is if you have driven less than 15,000 kilometers or if your car is less than 2 years old. If you have driven more than 15,000 kilometers, a larger service is more suitable for you.
                 </p>
-                <a href="./order/" class="btn btn-primary" style='font-size: 15px;'>Schedule your appointment</a>
+                <a href="./order/?step=1" class="btn btn-primary" style='font-size: 15px;'>Schedule your appointment</a>
             </div>
         </div>
     </div>
@@ -107,7 +109,7 @@
                 <p class="container__text">
                     Is your car older than 2 years or has it driven more than 15,000 kilometres? Then a major overhaul is the right time to do. We at Van Franken think it is important that every car needs a service every 5 years.
                 </p>
-                <a class="btn btn-primary" href="./order/" role="button">Schedule your appointment</a>
+                <a class="btn btn-primary" href="./order/?step=1" role="button">Schedule your appointment</a>
             </div>
             <div class="col-12 col-lg-6">
                 <img class="img-fluid" src="./assets/img/working-man-2.png" alt="banner" loading="lazy" style="width:100%; background-attachment: fixed; background-position: center; border-radius: 20px">
@@ -123,55 +125,50 @@
             Here we have some reviews about our services for you.
         </p>
         <a class="btn btn-primary" href="index.php" role="button">Click for more reviews</a>
-        <div class="row gutters-4 gutters-lg-3 align-items-center">
-            <div class="col-12 col-lg-4">
-                <h3 class="review__name">
-                    J. van het paard
-                </h3>
-                <span class="review__stars">
-                    ⭐⭐⭐⭐⭐
-                </span>
-                <p class="review__text">
-                    Good service with affordable prices
-                </p>
-            </div>
-            <div class="col-12 col-lg-4">
-                <h3 class="review__name">
-                    H. Kleefman
-                </h3>
-                <span class="review__stars">
-                    ⭐⭐⭐⭐⭐
-                </span>
-                <p class="review__text">
-                    Excellent
-                </p>
-            </div>
-            <div class="col-12 col-lg-4">
-                <h3 class="review__name">
-                    P. Meindertsma
-                </h3>
-                <span class="review__stars">
-                    ⭐⭐⭐⭐⭐
-                </span>
-                <p class="review__text">
-                    Brought my Volkswagen to Driezie last Friday evening to have the cleats replaced. I indicated that I could not arrive earlier than 17:30 and that was no problem. It would be ready in an hour. Thank you and see you next time. </p>
-            </div>
+        <div class="row gutters-4 gutters-lg-3 align-items-center review-container">
+
+            <?php
+
+            try {
+    
+                $reviews = getFromDB('users.first_name, users.last_name, reviews.content, reviews.stars, reviews.header', 'reviews join users on users.klnr = reviews.user_id', '1 ORDER by reviews.stars DESC LIMIT 6');
+    
+                foreach ($reviews as $review) {
+                    echo '<div class="review-col">';
+                    echo '<h3 class="review__name">';
+                    echo $review['first_name'] . ' ' . $review['last_name'];
+                    echo '</h3>';
+                    echo '<p class="review__stars">';
+                    for ($i = 0; $i < $review['stars']; $i++) {
+                        echo '⭐';
+                    }
+                    echo '</p>';
+                    echo '<h4 class="review__header">';
+                    echo $review['header'];
+                    echo '</h4>';
+                    echo '<p class="review__text">';
+                    echo $review['content'];
+                    echo '</p>';
+                    echo '</div>';
+                }
+            } catch (Exception $e) {
+                echo '<h2>Geen reviews</h2>'. $e->getMessage();
+            }
+            ?>
         </div>
     </div>
     </div>
 
     <footer>
-        <?php 
+        <?php
         require_once './assets/html/footer.php';
         ?>
     </footer>
 </body>
-    <script>
-
-        <?php
-        require_once './assets/js/nav.js';
-        ?>
-
-    </script>
+<script>
+    <?php
+    require_once './assets/js/nav.js';
+    ?>
+</script>
 
 </html>
