@@ -57,8 +57,6 @@ function getFromDB($what = "*", $table = "users", $where = "1", $debug = FALSE)
 // Alert function
 function alert($type, $title,  $message, $location, $link_prefix = '?')
 {
-    // check if location is not empty
-
     if (!empty($location)) {
         header('Location: ' . $location . $link_prefix . 'action=' . $type . '&message=' . $message . '&title=' . $title);
     } else {
@@ -73,21 +71,17 @@ function try_login()
 {
     global $dbh;
     $dbh = getDB();
-
     $email = $_POST['email'];
     $password = $_POST['password'];
     $stmt = $dbh->prepare("SELECT * FROM users WHERE email = :email");
     $stmt->bindParam(':email', $email);
     $stmt->execute();
     $user = $stmt->fetch();
-
     if ($user) {
         if (password_verify($password, $user['password'])) {
             $_SESSION['session_id'] = $user['klnr'];
             $_SESSION['session_email'] = $user['email'];
             $_SESSION['session_role'] = $user['role'];
-
-
             alert('green', '🥳 Logged in!', 'You logged in successfully!', 'customer');
         } else {
             alert('red', '⚠️ Error!', 'Data is incorrect!', 'login.php');
@@ -110,13 +104,6 @@ function try_register()
     global $dbh;
     $dbh = getDB();
 
-    // $fname = $_POST['fname'];
-    // $lname = $_POST['lname'];
-    // $email = $_POST['email'];
-    // $phonenumber = $_POST['phonenumber'];
-    // $password = $_POST['password'];
-    // $password2 = $_POST['password2'];
-
     $array = array(
         'fname' => $_POST['fname'],
         'lname' => $_POST['lname'],
@@ -129,7 +116,6 @@ function try_register()
         'streetnumber' => $_POST['streetnumber'],
         'location' => $_POST['zipcode'],
     );
-
     $hassed_password = password_hash($_POST['password'], PASSWORD_DEFAULT);
 
     $_SESSION['data'] = $array;
@@ -250,14 +236,19 @@ function progress_step($step)
     // }
     if ($step = 2) {
         // Invoer kenteken etc
-        if(isset($_POST['numberplate'])){
+        if(isset($_POST['order_step_2']) OR !isset($_SESSION['order']['numberplate'])){
             $_SESSION['order']['numberplate'] = $_POST['numberplate'];
+            
         } else{
             echo 'no';
         }
     }
     if ($step = 3) {
-        // type of issue in array
+        if(isset($_POST['order_step_3'])){
+            $_SESSION['order']['service'] = $_POST['service'];
+        } else{
+            echo 'hell nah';
+        }
     }
     // if ($step = 4) {
     //     // date and time

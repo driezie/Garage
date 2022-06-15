@@ -262,3 +262,14 @@ body {
 ::-webkit-scrollbar-thumb:hover {
     background: #d1d1d1;
 }
+
+/* order */
+
+.service_form ul li {
+    text-decoration: dashed;
+}
+
+.service_form ul {
+    list-style-type: none;
+    padding: 0;
+}
