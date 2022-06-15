@@ -1,8 +1,6 @@
 <?php
-// require_once '/xampp/htdocs/Projecten/Garage/config.php';
-require_once '/xampp/htdocs/3-leerjaar-2/projecten/6%20-%20garage/config.php';
+require_once '/xampp/htdocs/Projecten/Garage/config.php';
 session_start();
-
 
 
 
