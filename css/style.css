@@ -70,15 +70,11 @@ body {
     color: white;
     font-size: 17px !important;
     text-decoration: none !important;
-
 }
 
 .container_button b:hover {
     text-decoration: none !important;
     color: rgb(194, 194, 194);
-
-
-
 }
 
 .container h2 {
