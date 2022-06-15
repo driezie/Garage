@@ -132,7 +132,7 @@
                 </li>
             </ul>
             <div class="form-row">
-                    <button type="submit" name="order_step_2" class="btn btn-primary">Next Step aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</button>
+                    <button type="submit" name="order_step_2" class="btn btn-primary">Next Step   : )</button>
                 </div>
         </div>
         <!-- Einde step 3 | Start step 4 -->
@@ -177,10 +177,7 @@
         <?php } ?>
 
         </p>
-
     </div>
-
-    <!-- <p class="container__text">Here is your appointment list</p> -->
     </div>
     </div>
     </div>
