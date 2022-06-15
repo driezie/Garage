@@ -1,5 +1,6 @@
 <?php
-require_once '/xampp/htdocs/Projecten/Garage/config.php';
+require_once '/xampp/htdocs/3-leerjaar-2/projecten/6%20-%20garage/config.php';
+
 session_start();
 
 
@@ -101,7 +102,7 @@ function try_logout()
 {
     $_SESSION = NULL;
     session_destroy();
-    alert('green', '🥳 Logged out!', 'You logged out successfully!', '/Projecten/Garage/public/login.php');
+    alert('green', '🥳 Logged out!', 'You logged out successfully!', '/3-leerjaar-2/projecten/6%20-%20garage/public/login.php');
 }
 
 
