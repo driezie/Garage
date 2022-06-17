@@ -92,15 +92,16 @@ if(isset($_POST['order_step_2'])){
         <?php if (($_GET['step'] == 1)) {
 
             if (!isLoggedIn()) {
-
+                $_SESSION['order']['numberplate'] = '';
                 progress_step(1); ?>
+
                 <div class="col-12 col-lg-7">
                     <h2 class="h3 header">Step 1: My Account</h2>
 
                     <p class="container__text">Please login using your account. Have no account? Create one <a href="../register">here</a>.</p>
                     <div class="form-row">
                         <button type="submit" class="btn btn-primary" onclick="window.location.href='../login.php?order=true'">Log in</button>
-                        <button type="submit" class="btn btn-primary" onclick="window.location.href='../registar'">Create a new account</button>
+                        <button type="submit" class="btn btn-primary" onclick="window.location.href='../register.php'">Create a new account</button>
                     </div>
                 </div>
             <?php } else {
@@ -112,7 +113,6 @@ if(isset($_POST['order_step_2'])){
             <?php
             // progress_step(2);
             alert_session();
-            // $_SESSION['numberplate'] = '';
             ?>
             <div class="col-12 col-lg-7">
                 <h2 class="h3 header">Step 2: Vehicle Information</h2>
