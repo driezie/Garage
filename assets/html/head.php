@@ -1,6 +1,7 @@
 <?php
 // requires
 require_once '/xampp/htdocs/Projecten/Garage/public/assets/actions/functions.php';
+// require_once 'harm/garage/public/assets/actions/functions.php';
 
 if (isset($_GET['action'])) {
     if ($_GET['action'] == 'logout') {

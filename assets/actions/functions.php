@@ -236,7 +236,7 @@ function progress_step($step)
     //         // alert('green', '🥳 Already logged in!', 'You have skipped the firt step becuae your already logged in', 'register.phpstep=2');
     //     }
     // }
-    if ($step = 2) {
+    if ($step == 2) {
         // Invoer kenteken etc
         if(isset($_POST['order_step_2']) OR !isset($_SESSION['order']['numberplate'])){
             $_SESSION['order']['numberplate'] = $_POST['numberplate'];
@@ -245,14 +245,48 @@ function progress_step($step)
             
         }
     }
-    if ($step = 3) {
+    if ($step == 3) {
         if(isset($_POST['order_step_3'])){
             $_SESSION['order']['service'] = $_POST['service'];
         } else{
+            // Als je het nog niet ingevuld hebt.
+            // alert('red', 'Fill in everything!', 'You havent checked any checkboxes, please try again', 'order/index.php?step=3');
             
         }
+    } else{
+        // Als je nog niet bij de stap bent ?step=3
     }
-    // if ($step = 4) {
-    //     // date and time
-    // }
+    if ($step == 4) {
+        if(isset($_POST['order_step_4'])){
+            $_SESSION['order']['date'] = $_POST['date'];
+            $_SESSION['order']['time'] = $_POST['time'];
+        }
+    }
+    if ($step == 5) {
+        if(isset($_SESSION['order'])){
+            // Put appointment in database
+            $dbh = getDB();
+
+            // Format date
+            $date = date('Y-m-d', strtotime($_SESSION['order']['date']));
+            $json_array = json_encode($_SESSION['order']['service'], JSON_NUMERIC_CHECK);
+            
+
+            try{
+
+                $sql = "INSERT INTO app (date, time, type, user_id, car) VALUES (:date, :time, :type, :user_id, :car)";
+    
+                $stmt = $dbh->prepare($sql);
+                $stmt->bindParam(':date', $date);
+                $stmt->bindParam(':time', $_SESSION['order']['time']);
+                $stmt->bindParam(':type', $json_array);
+                $stmt->bindParam(':user_id', $_SESSION['order']['user']);
+                $stmt->bindParam(':car', $_SESSION['order']['numberplate']);
+                $stmt->execute();
+            } catch(PDOException $e){
+                echo "Afspraak maken error: ".$e->getMessage();
+            }
+
+        }
+    }
 }

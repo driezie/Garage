@@ -24,7 +24,7 @@
                 array('My Profile', '.', 'normal'),
                 array('My Reviews', '../reviews', 'normal'),
                 array('Logout', '?action=logout', 'normal'),
-                array('Schedule your appointment', './order', 'special'),
+                array('Schedule your appointment', './order/?step=1', 'special'),
             ),
         );
         createnavbar($array);

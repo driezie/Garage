@@ -18,28 +18,7 @@
 
     <?php
 
-    if(isset($_POST['post_review'])){
-        $review = $_POST['review'];
-        $header = $_POST['review_header'];
-        $rating = $_POST['review_stars'];
-        $user_id = $_SESSION['session_id'];
 
-        
-        $sql = 'INSERT INTO reviews (user_id, header, content, stars) VALUES (?, ?, ?, ?)';
-
-        $stmt = $dbh->prepare($sql);
-        $stmt->execute([$user_id, $review, $rating]);
-
-
-
-
-        if($review_id){
-            echo '<script>alert("Review succesvol toegevoegd!");</script>';
-        }
-        else{
-            echo '<script>alert("Er is iets fout gegaan!");</script>';
-        }
-    }
 
     // clears the form data
     $_SESSION['data'] = array();
@@ -146,18 +125,9 @@
         </h2>
         <p class="container__text">
             Here we have some reviews about our services for you. <br>
-            Leave a review if you have a question or if you have a problem with our service.
+
         </p>
-        <form action="index.php" method="post">
-            <?php if (isLoggedIn()) {  ?>
-                <form action="index.php" method="post">
-                    <input type="text" name="review_stars" id="review_stars"> <br>
-                    <input type="text" name="review_header" id="review_header"> <br>
-                    <input type="text" name="review" id="review"> <br>
-                    <input type="submit" value="Submit" name="post_review">
-                </form>
-            <?php } ?>
-        </form>
+        
         <div class="row gutters-4 gutters-lg-3 align-items-center review-container">
 
             <?php
