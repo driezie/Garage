@@ -18,6 +18,25 @@
 
     <?php
 
+    if(isset($_POST['post_review'])){
+        $review = $_POST['review'];
+        $rating = $_POST['rating'];
+        $user_id = $_SESSION['user_id'];
+
+        
+        $sql = 'INSERT INTO reviews (user_id, header, content, stars) VALUES (?, ?, ?, ?)';
+
+
+
+
+        if($review_id){
+            echo '<script>alert("Review succesvol toegevoegd!");</script>';
+        }
+        else{
+            echo '<script>alert("Er is iets fout gegaan!");</script>';
+        }
+    }
+
     // clears the form data
     $_SESSION['data'] = array();
 
@@ -122,17 +141,27 @@
             Reviews
         </h2>
         <p class="container__text">
-            Here we have some reviews about our services for you.
+            Here we have some reviews about our services for you. <br>
+            Leave a review if you have a question or if you have a problem with our service.
         </p>
-        <a class="btn btn-primary" href="index.php" role="button">Click for more reviews</a>
+        <form action="index.php" method="post">
+            <?php if (isLoggedIn()) {  ?>
+                <form action="index.php" method="post">
+                    <input type="text" name="stars" id="review_stars"> <br>
+                    <input type="text" name="header" id="review_header"> <br>
+                    <input type="text" name="review" id="review"> <br>
+                    <input type="submit" value="Submit" name="post_review">
+                </form>
+            <?php } ?>
+        </form>
         <div class="row gutters-4 gutters-lg-3 align-items-center review-container">
 
             <?php
 
             try {
-    
+
                 $reviews = getFromDB('users.first_name, users.last_name, reviews.content, reviews.stars, reviews.header', 'reviews join users on users.klnr = reviews.user_id', '1 ORDER by reviews.stars DESC LIMIT 6');
-    
+
                 foreach ($reviews as $review) {
                     echo '<div class="review-col">';
                     echo '<h3 class="review__name">';
@@ -152,7 +181,7 @@
                     echo '</div>';
                 }
             } catch (Exception $e) {
-                echo '<h2>Geen reviews</h2>'. $e->getMessage();
+                echo '<h2>Geen reviews</h2>' . $e->getMessage();
             }
             ?>
         </div>

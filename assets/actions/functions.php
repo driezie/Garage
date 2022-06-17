@@ -160,6 +160,8 @@ function try_register()
 
 
 
+
+
 // Nav bar stuff
 function createnavbar($array)
 {
@@ -240,14 +242,14 @@ function progress_step($step)
             $_SESSION['order']['numberplate'] = $_POST['numberplate'];
             
         } else{
-            echo 'no';
+            
         }
     }
     if ($step = 3) {
         if(isset($_POST['order_step_3'])){
             $_SESSION['order']['service'] = $_POST['service'];
         } else{
-            echo 'hell nah';
+            
         }
     }
     // if ($step = 4) {
