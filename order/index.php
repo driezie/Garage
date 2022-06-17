@@ -134,11 +134,11 @@
                     <ul>
                     <li>
                             <input checked class="form-check-input" type="checkbox" name="service[]" value="1" disabled>
-                            <label class="form-check-label" for="service[]">Basic service (required)</label>
+                            <label class="form-check-label" for="service[]">Basic car check (required)</label>
                         </li>
                         <li>
                             <input class="form-check-input" type="checkbox" name="service[]" value="1">
-                            <label class="form-check-label" for="service[]">Vehicle is broken</label>
+                            <label class="form-check-label" for="service[]">Wintercheck</label>
                         </li>
                         <li>
                             <input class="form-check-input" type="checkbox" name="service[]" value="2">
@@ -146,11 +146,11 @@
                         </li>
                         <li>
                             <input class="form-check-input" type="checkbox" name="service[]" value="3">
-                            <label class="form-check-label" for="service[]">Vehicle is not working</label>
+                            <label class="form-check-label" for="service[]">Wheel issues</label>
                         </li>
                         <li>
                             <input class="form-check-input" type="checkbox" name="service[]" value="4">
-                            <label class="form-check-label" for="service[]">Vehicle is not working</label>
+                            <label class="form-check-label" for="service[]">Summercheck</label>
                         </li>
                     </ul>
                     <div class="form-row">

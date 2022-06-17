@@ -44,7 +44,7 @@
         <div class="centered">
             <h1 class="" style='padding: 20px 0 20px 0; font-size: 60px; line-height: 60px;'>van Franken. Forward together.</h1>
             <div class="container__lower" style='text-align: center; position: relative; z-index: 100;'>
-                <a href="./order/" class="container_button" style='font-size: 17px;'><b>Schedule maintenance</b></a>
+                <a href="./order/?step=1" class="container_button" style='font-size: 17px;'><b>Schedule maintenance</b></a>
                 <span class="container_text" style='font-size: 17px; padding-left: 10px; padding-right: 10px;'><b> | </b></span>
                 <a href="#reviews" class="container_button" style='font-size: 17px;'><b>View reviews</b></a>
             </div>
@@ -55,9 +55,9 @@
     <div class="container mt-5">
         <div class="d-flex justify-content-center">
             <div class="col-12 col-lg-10">
-                <div class="alert alert-success" role="alert">
-                    👋 <b>Welcome!</b> This website is made by <b>someone</b>, <b>someone</b> !& <b>someone</b>.
-                </div>
+                <!-- <div class="alert alert-success" role="alert">
+                    👋 <b>Welcome!</b> This website is made by <b>Jelte</b>, <b>Harm</b> !& <b>Olaf</b>.
+                </div> -->
                 <h2 class="header">
                     Why a maintenance service at Van Franken?
                 </h2>

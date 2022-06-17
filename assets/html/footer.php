@@ -33,7 +33,7 @@
                         <a href="./login.php">Sign In</a>
                     </p>
                     <p class="container__text">
-                        <a href="./order">Schedule your appointment</a>
+                        <a href="./order/?step=1">Schedule your appointment</a>
                     </p>
                 </div>
 
@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <p class="text-muted" style="margin: 0 auto;">
-                        van Franken Car Service, Copyright &copy; 2020
+                        van Franken Car Service, Copyright &copy; 2022
                     </p>
                 </div>
             </div>
