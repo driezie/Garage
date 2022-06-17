@@ -20,11 +20,15 @@
 
     if(isset($_POST['post_review'])){
         $review = $_POST['review'];
-        $rating = $_POST['rating'];
-        $user_id = $_SESSION['user_id'];
+        $header = $_POST['review_header'];
+        $rating = $_POST['review_stars'];
+        $user_id = $_SESSION['session_id'];
 
         
         $sql = 'INSERT INTO reviews (user_id, header, content, stars) VALUES (?, ?, ?, ?)';
+
+        $stmt = $dbh->prepare($sql);
+        $stmt->execute([$user_id, $review, $rating]);
 
 
 
@@ -147,8 +151,8 @@
         <form action="index.php" method="post">
             <?php if (isLoggedIn()) {  ?>
                 <form action="index.php" method="post">
-                    <input type="text" name="stars" id="review_stars"> <br>
-                    <input type="text" name="header" id="review_header"> <br>
+                    <input type="text" name="review_stars" id="review_stars"> <br>
+                    <input type="text" name="review_header" id="review_header"> <br>
                     <input type="text" name="review" id="review"> <br>
                     <input type="submit" value="Submit" name="post_review">
                 </form>
